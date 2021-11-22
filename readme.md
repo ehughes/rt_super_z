@@ -1,1 +1,1 @@
-west init -m https://bitbucket.org/_ehughes/rt_super_zephyr --mr master
+west init -m https://github.com/ehughes/rt_super_z --mr main
