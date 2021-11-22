@@ -1,46 +1,50 @@
-.. _mimxrt685_evk:
+.. _rt_super:
 
-NXP MIMXRT685-EVK
+RT685 SuperMonkey
 ##################
 
 Overview
 ********
 
-The i.MX RT600 is a crossover MCU family optimized for 32-bit immersive audio
-playback and voice user interface applications combining a high-performance
-Cadence Tensilica HiFi 4 audio DSP core with a next-generation Cortex-M33
-core. The i.MX RT600 family of crossover MCUs is designed to unlock the
-potential of voice-assisted end nodes with a secure, power-optimized embedded
-processor.
+The RT685 SuperMonkey is an example of a minimal configuration hardware design using 
+the NXP MIMXRT685 SoC.   The overarching goal was to illustrate a minimal configuration
+project which allows the CPU to boot with simple QSPI flash and the simplest
+power configuration.  This zephyr board port was derived from the MIMXRT685-EVK board but
+is configured to use QSPI flash that is connected to FlexSPI Port A.    One could use this
+port as a simplified starting point for a new RT600 based design as it shows how to include
+a bootheader. 
 
-The i.MX RT600 family provides up to 4.5MB of on-chip SRAM and several
-high-bandwidth interfaces to access off-chip flash, including an Octal/Quad SPI
-interface with an on-the-fly decryption engine.
 
-.. image:: ./mimxrt685_evk.jpg
-   :width: 720px
+.. image:: ./rt_super_ad.png
+   :width: 720
    :align: center
-   :alt: MIMXRT685-EVK
+   :alt: rt_super_ad
+
+.. image:: ./rt_super.png
+   :width: 720
+   :align: center
+   :alt: rt_super
 
 Hardware
 ********
 
+Schematics can be found here : `SuperMonkey Hardware Design Files`_
+
+The SuperMonkey was intended to be a simple breakout board for the RT685 with a focus
+on audio interfaces.
+
 - MIMXRT685SFVKB Cortex-M33 (300 MHz, 128 KB TCM) core processor with Cadence Xtensa HiFi4 DSP
-- Onboard, high-speed USB, Link2 debug probe with CMSIS-DAP protocol (supporting Cortex M33 debug only)
-- High speed USB port with micro A/B connector for the host or device functionality
-- UART, I2C and SPI port bridging from i.MX RT685 target to USB via the on-board debug probe
-- 512 MB Macronix Octal SPI Flash operating at 1.8 V
-- 4.5 MB Apmemory PSRAM
-- Full size SD card slot (SDIO)
-- NXP PCA9420UK PMIC
-- User LEDs
-- Reset and User buttons
-- Arduino and PMod/Host expansion connectors
-- NXP FXOS8700CQ accelerometer
-- Stereo audio codec with line in/out and electret microphone
-- Stereo NXP TFA9894 digital amplifiers, with option for external +5V power for higher performance speakers
-- Support for up to eight off-board digital microphones via 12-pin header
-- Two on-board DMICS
+- High speed USB port with micro A/B connector for device functionality
+- UART, I2C and SPI
+- Multiple I2S interfaces
+- Debug UART
+- SDIO Signals
+- 8 DMIC Channels
+- SWD Debugging
+- PMIC ON Request
+- 3x ADC Inputs
+- Audio MCLK Access
+- I3C 
 
 For more information about the MIMXRT685 SoC and MIMXRT685-EVK board, see
 these references:
@@ -55,8 +59,9 @@ these references:
 Supported Features
 ==================
 
-The mimxrt685_evk board configuration supports the following hardware
-features:
+In general,  the SuperMonkey supports anything that the RT685 supports.  The major exception
+being the OctalSPI Flash.    The intent of this board port is a minimum board configuration to use
+as an example.
 
 +-----------+------------+-------------------------------------+
 | Interface | Controller | Driver/Component                    |
@@ -102,9 +107,8 @@ features:
 
 The default configuration can be found in the defconfig file:
 
-	``boards/arm/mimxrt685_evk/mimxrt685_evk_cm33_defconfig``
+	``boards/arm/mimxrt685_supermonkey/mimxrt685_supermonkey_defconfig``
 
-Other hardware features are not currently supported by the port.
 
 Connections and IOs
 ===================
@@ -335,3 +339,6 @@ steps:
 
 .. _i.MX RT685 Reference Manual:
    https://www.nxp.com/webapp/Download?colCode=UM11147
+
+.. _SuperMonkey Hardware Design Files:
+   https://github.com/ehughes/rt_super
