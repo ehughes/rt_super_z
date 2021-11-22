@@ -1,0 +1,53 @@
+
+Breakpoint=C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c:31, State=BP_STATE_DISABLED
+Breakpoint=C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c:32, State=BP_STATE_DISABLED
+OpenDocument="fatal.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/fatal.c", Line=22
+OpenDocument="kswap.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/kswap.h", Line=195
+OpenDocument="exc.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/cortex_m/exc.h", Line=168
+OpenDocument="kernel_arch_func.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/kernel_arch_func.h", Line=47
+OpenDocument="cmsis_gcc.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/cmsis_gcc.h", Line=1145
+OpenDocument="thread_stack.h", FilePath="C:/ELI/rt_super_z/zephyr/include/kernel/thread_stack.h", Line=284
+OpenDocument="init.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/init.c", Line=305
+OpenDocument="core_cm33.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/core_cm33.h", Line=2569
+OpenDocument="irq_init.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c", Line=0
+OpenDocument="asm_inline_gcc.h", FilePath="C:/ELI/rt_super_z/zephyr/include/arch/arm/aarch32/asm_inline_gcc.h", Line=87
+OpenDocument="log_core.c", FilePath="C:/ELI/rt_super_z/zephyr/subsys/logging/log_core.c", Line=1229
+OpenDocument="fault.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault.c", Line=1033
+OpenDocument="fault_s.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault_s.S", Line=77
+OpenDocument="ksched.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/ksched.h", Line=147
+OpenDocument="syscall.h", FilePath="C:/ELI/rt_super_z/zephyr/include/syscall.h", Line=94
+OpenDocument="cpu_idle.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cpu_idle.S", Line=97
+OpenDocument="main.c", FilePath="C:/ELI/rt_super_z/rt_super_zephyr/hello_world/src/main.c", Line=0
+OpenDocument="prep_c.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/prep_c.c", Line=156
+OpenDocument="reset.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/reset.S", Line=94
+OpenDocument="device.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/device.c", Line=54
+OpenDocument="fsl_iopctl.h", FilePath="c:/eli/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_iopctl.h", Line=55
+OpenDocument="uart_mcux_flexcomm.c", FilePath="C:/ELI/rt_super_z/zephyr/drivers/serial/uart_mcux_flexcomm.c", Line=45
+OpenDocument="time_units.h", FilePath="C:/ELI/rt_super_z/zephyr/include/sys/time_units.h", Line=50
+OpenDocument="fsl_usart.h", FilePath="c:/eli/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_usart.h", Line=376
+OpenDocument="fsl_ostimer.c", FilePath="C:/ELI/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_ostimer.c", Line=342
+OpenDocument="OZONE.jdebug", FilePath="C:/ELI/rt_super_z/rt_super_zephyr/hello_world/OZONE.jdebug", Line=0
+OpenDocument="banner.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/banner.c", Line=0
+OpenDocument="stdout_console.c", FilePath="C:/ELI/rt_super_z/zephyr/lib/libc/minimal/source/stdout/stdout_console.c", Line=0
+OpenDocument="fsl_power.h", FilePath="C:/ELI/rt_super_z/modules/hal/nxp/mcux/devices/MIMXRT685S/fsl_power.h", Line=289
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=2, w=704, h=236, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=704, h=175, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=0, w=356, h=277, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=1, w=356, h=277, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory Usage", DockArea=BOTTOM, x=0, y=0, w=1282, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=236, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=1, w=356, h=277, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Console", DockArea=BOTTOM, x=2, y=0, w=230, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Zephyr", DockArea=RIGHT, x=0, y=0, w=704, h=158, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, Showing="Task List"
+TableHeader="Data Sampling Table", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
+TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[100;100;100;100;100;100;100;100;100]
+TableHeader="Vector Catches", SortCol="None", SortOrder="ASCENDING", VisibleCols=["";"Vector Catch";"Description"], ColWidths=[50;300;500]
+TableHeader="Break & Tracepoints", SortCol="Type", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[50;93;127;100]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Source"], ColWidths=[280;424]
+TableHeader="Power Sampling", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="...", SortCol="...", SortOrder="ASCENDING", VisibleCols=["..."], ColWidths=[704]
+TableHeader="Task List", SortCol="Threads", SortOrder="ASCENDING", VisibleCols=["Threads";"TID";"Entry";"Priority";"Status";"Stack"], ColWidths=[313;110;110;110;110;110]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[431;124;87;110;620]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;359]

@@ -1,0 +1,27 @@
+#
+# Copyright (c) 2020, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+identifier: rt_super
+name: NXP RT Super Monkey
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 4608
+flash: 8192
+supported:
+  - counter
+  - dma
+  - gpio
+  - hwinfo
+  - i2c
+  - i2s
+  - sdhc
+  - spi
+  - watchdog
+  - usb_device
