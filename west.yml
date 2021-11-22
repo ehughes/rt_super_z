@@ -17,5 +17,5 @@ manifest:
       import: true
    
   self:
-    path: rt_super_zephyr
+    path: rt_super_z
     
