@@ -1,0 +1,495 @@
+/dts-v1/;
+
+/ {
+	#address-cells = < 0x1 >;
+	#size-cells = < 0x1 >;
+	model = "NXP MIMXRT685-EVK board";
+	compatible = "nxp,mimxrt685";
+	soc {
+		#address-cells = < 0x1 >;
+		#size-cells = < 0x1 >;
+		compatible = "simple-bus";
+		interrupt-parent = < &nvic >;
+		ranges;
+		sram: sram@30018000 {
+			ranges = < 0x20180000 0x30180000 0x300000 >;
+			#address-cells = < 0x1 >;
+			#size-cells = < 0x1 >;
+			sram0: memory@20180000 {
+				compatible = "mmio-sram";
+				reg = < 0x20180000 0x300000 >;
+			};
+			sram1: memory@40140000 {
+				compatible = "mmio-sram";
+				reg = < 0x40140000 0x4000 >;
+			};
+		};
+		peripheral: peripheral@50000000 {
+			ranges = < 0x0 0x50000000 0x10000000 >;
+			#address-cells = < 0x1 >;
+			#size-cells = < 0x1 >;
+			clkctl0: clkctl@1000 {
+				compatible = "nxp,lpc-syscon";
+				reg = < 0x1000 0x1000 >;
+				label = "CLKCTL_0";
+				#clock-cells = < 0x1 >;
+			};
+			clkctl1: clkctl@21000 {
+				compatible = "nxp,lpc-syscon";
+				reg = < 0x21000 0x1000 >;
+				label = "CLKCTL_1";
+				#clock-cells = < 0x1 >;
+				phandle = < 0x2 >;
+			};
+			uuid: uuid@2f50 {
+				compatible = "nxp,lpc-uid";
+				reg = < 0x2f50 0x10 >;
+			};
+			gpio0: gpio@0 {
+				compatible = "nxp,lpc-gpio";
+				reg = < 0x100000 0x1000 >;
+				interrupts = < 0x4 0x2 >, < 0x5 0x2 >, < 0x6 0x2 >, < 0x7 0x2 >;
+				label = "GPIO_0";
+				gpio-controller;
+				#gpio-cells = < 0x2 >;
+				port = < 0x0 >;
+				status = "okay";
+				phandle = < 0x8 >;
+			};
+			gpio1: gpio@1 {
+				compatible = "nxp,lpc-gpio";
+				reg = < 0x100000 0x1000 >;
+				interrupts = < 0x23 0x2 >, < 0x24 0x2 >, < 0x25 0x2 >, < 0x26 0x2 >;
+				label = "GPIO_1";
+				gpio-controller;
+				#gpio-cells = < 0x2 >;
+				port = < 0x1 >;
+				status = "okay";
+				phandle = < 0x7 >;
+			};
+			gpio2: gpio@2 {
+				compatible = "nxp,lpc-gpio";
+				reg = < 0x100000 0x1000 >;
+				label = "GPIO_2";
+				gpio-controller;
+				#gpio-cells = < 0x2 >;
+				port = < 0x2 >;
+				status = "okay";
+				phandle = < 0x4 >;
+			};
+			flexcomm0: flexcomm@106000 {
+				compatible = "nxp,lpc-usart";
+				reg = < 0x106000 0x1000 >;
+				interrupts = < 0xe 0x0 >;
+				clocks = < &clkctl1 0x0 >;
+				label = "FLEXCOMM_0";
+				status = "okay";
+				current-speed = < 0x1c200 >;
+			};
+			flexcomm1: i2s0: flexcomm@107000 {
+				compatible = "nxp,lpc-i2s";
+				reg = < 0x107000 0x1000 >;
+				interrupts = < 0xf 0x0 >;
+				clocks = < &clkctl1 0x1 >;
+				label = "I2S_0";
+				status = "okay";
+				#address-cells = < 0x1 >;
+				#size-cells = < 0x0 >;
+				dmas = < &dma0 0x2 >;
+				dma-names = "rx";
+			};
+			flexcomm2: flexcomm@108000 {
+				compatible = "nxp,lpc-flexcomm";
+				reg = < 0x108000 0x1000 >;
+				interrupts = < 0x10 0x0 >;
+				clocks = < &clkctl1 0x2 >;
+				label = "FLEXCOMM_2";
+				status = "disabled";
+			};
+			flexcomm3: i2s1: flexcomm@109000 {
+				compatible = "nxp,lpc-i2s";
+				reg = < 0x109000 0x1000 >;
+				interrupts = < 0x11 0x0 >;
+				clocks = < &clkctl1 0x3 >;
+				label = "I2S_1";
+				status = "okay";
+				#address-cells = < 0x1 >;
+				#size-cells = < 0x0 >;
+				dmas = < &dma0 0x7 >;
+				dma-names = "tx";
+			};
+			flexcomm4: flexcomm@122000 {
+				compatible = "nxp,lpc-flexcomm";
+				reg = < 0x122000 0x1000 >;
+				interrupts = < 0x12 0x0 >;
+				clocks = < &clkctl1 0x4 >;
+				label = "FLEXCOMM_4";
+				status = "disabled";
+			};
+			flexcomm5: flexcomm@123000 {
+				compatible = "nxp,lpc-flexcomm";
+				reg = < 0x123000 0x1000 >;
+				interrupts = < 0x13 0x0 >;
+				clocks = < &clkctl1 0x5 >;
+				label = "FLEXCOMM_5";
+				status = "disabled";
+			};
+			flexcomm6: flexcomm@124000 {
+				compatible = "nxp,lpc-flexcomm";
+				reg = < 0x124000 0x1000 >;
+				interrupts = < 0x2b 0x0 >;
+				label = "FLEXCOMM_6";
+				clocks = < &clkctl1 0x6 >;
+				status = "disabled";
+			};
+			flexcomm7: flexcomm@125000 {
+				compatible = "nxp,lpc-flexcomm";
+				reg = < 0x125000 0x1000 >;
+				interrupts = < 0x2c 0x0 >;
+				label = "FLEXCOMM_7";
+				clocks = < &clkctl1 0x7 >;
+				status = "disabled";
+			};
+			usbhs: zephyr_udc0: usbhs@144000 {
+				compatible = "nxp,mcux-usbd";
+				reg = < 0x144000 0x1000 >;
+				interrupts = < 0x32 0x1 >;
+				num-bidir-endpoints = < 0x6 >;
+				status = "okay";
+				label = "USBHS_0";
+			};
+			hs_lspi: spi@126000 {
+				compatible = "nxp,lpc-spi";
+				reg = < 0x126000 0x1000 >;
+				interrupts = < 0x14 0x0 >;
+				clocks = < &clkctl1 0x8 >;
+				label = "HS_LSPI";
+				status = "disabled";
+				#address-cells = < 0x1 >;
+				#size-cells = < 0x0 >;
+			};
+			dma0: dma-controller@104000 {
+				compatible = "nxp,lpc-dma";
+				reg = < 0x104000 0x1000 >;
+				interrupts = < 0x1 0x0 >;
+				label = "DMA_0";
+				status = "okay";
+				#dma-cells = < 0x1 >;
+				dma-channels = < 0x14 >;
+				phandle = < 0x3 >;
+			};
+			dma1: dma-controller@105000 {
+				compatible = "nxp,lpc-dma";
+				reg = < 0x105000 0x1000 >;
+				interrupts = < 0x36 0x0 >;
+				label = "DMA_1";
+				status = "disabled";
+				#dma-cells = < 0x1 >;
+			};
+			os_timer: timers@113000 {
+				compatible = "nxp,os-timer";
+				reg = < 0x113000 0x1000 >;
+				interrupts = < 0x29 0x0 >;
+				status = "okay";
+				label = "OS_TIMER";
+			};
+			rtc: rtc@30000 {
+				compatible = "nxp,lpc-rtc";
+				reg = < 0x30000 0x1000 >;
+				interrupts = < 0x20 0x0 >;
+				status = "disabled";
+				label = "RTC_0";
+			};
+			trng: random@138000 {
+				compatible = "nxp,kinetis-trng";
+				reg = < 0x138000 0x1000 >;
+				status = "okay";
+				interrupts = < 0x1f 0x0 >;
+				label = "TRNG";
+			};
+			sc_timer: pwm@146000 {
+				compatible = "nxp,sctimer-pwm";
+				reg = < 0x146000 0x1000 >;
+				interrupts = < 0xc 0x0 >;
+				status = "okay";
+				prescaler = < 0x8 >;
+				label = "SC_TIMER";
+				#pwm-cells = < 0x2 >;
+				phandle = < 0x9 >;
+			};
+			wwdt0: watchdog@e000 {
+				compatible = "nxp,lpc-wwdt";
+				reg = < 0xe000 0x1000 >;
+				interrupts = < 0x0 0x0 >;
+				status = "okay";
+				clk-divider = < 0x1 >;
+				label = "WWDT_0";
+			};
+			wwdt1: watchdog@2e000 {
+				compatible = "nxp,lpc-wwdt";
+				reg = < 0x2e000 0x1000 >;
+				interrupts = < 0x34 0x0 >;
+				status = "disabled";
+				clk-divider = < 0x1 >;
+				label = "WWDT_1";
+			};
+			usdhc1: usdhc@136000 {
+				compatible = "nxp,imx-usdhc";
+				reg = < 0x136000 0x1000 >;
+				status = "okay";
+				interrupts = < 0x2d 0x0 >;
+				clocks = < &clkctl1 0x9 >;
+				label = "USDHC_1";
+				no-1-8-v;
+				pwr-gpios = < &gpio2 0xa 0x0 >;
+			};
+			usdhc2: usdhc@137000 {
+				compatible = "nxp,imx-usdhc";
+				reg = < 0x137000 0x1000 >;
+				status = "disabled";
+				interrupts = < 0x2e 0x0 >;
+				clocks = < &clkctl1 0xa >;
+				label = "USDHC_2";
+			};
+			lpadc0: lpadc@13A0000 {
+				compatible = "nxp,lpc-lpadc";
+				reg = < 0x13a000 0x304 >;
+				interrupts = < 0x16 0x0 >;
+				status = "okay";
+				clk-divider = < 0x1 >;
+				clk-source = < 0x0 >;
+				voltage-ref = < 0x2 >;
+				calibration-average = < 0x80 >;
+				power-level = < 0x1 >;
+				label = "LPADC_0";
+				offset-value-a = < 0xa >;
+				offset-value-b = < 0xa >;
+				#io-channel-cells = < 0x1 >;
+			};
+			ctimer0: ctimer@28000 {
+				compatible = "nxp,lpc-ctimer";
+				reg = < 0x28000 0x1000 >;
+				interrupts = < 0xa 0x0 >;
+				status = "okay";
+				clk-source = < 0x1 >;
+				clocks = < &clkctl1 0x0 >;
+				mode = < 0x0 >;
+				input = < 0x0 >;
+				prescale = < 0x0 >;
+				label = "CTIMER_0";
+			};
+			ctimer1: ctimer@29000 {
+				compatible = "nxp,lpc-ctimer";
+				reg = < 0x29000 0x1000 >;
+				interrupts = < 0xb 0x0 >;
+				status = "okay";
+				clk-source = < 0x1 >;
+				clocks = < &clkctl1 0x1 >;
+				mode = < 0x0 >;
+				input = < 0x0 >;
+				prescale = < 0x0 >;
+				label = "CTIMER_1";
+			};
+			ctimer2: ctimer@2a000 {
+				compatible = "nxp,lpc-ctimer";
+				reg = < 0x2a000 0x1000 >;
+				interrupts = < 0x27 0x0 >;
+				status = "okay";
+				clk-source = < 0x1 >;
+				clocks = < &clkctl1 0x2 >;
+				mode = < 0x0 >;
+				input = < 0x0 >;
+				prescale = < 0x0 >;
+				label = "CTIMER_2";
+			};
+			ctimer3: ctimer@2b000 {
+				compatible = "nxp,lpc-ctimer";
+				reg = < 0x2b000 0x1000 >;
+				interrupts = < 0xd 0x0 >;
+				status = "okay";
+				clk-source = < 0x1 >;
+				clocks = < &clkctl1 0x3 >;
+				mode = < 0x0 >;
+				input = < 0x0 >;
+				prescale = < 0x0 >;
+				label = "CTIMER_3";
+			};
+			ctimer4: ctimer@2c000 {
+				compatible = "nxp,lpc-ctimer";
+				reg = < 0x2c000 0x1000 >;
+				interrupts = < 0x28 0x0 >;
+				status = "okay";
+				clk-source = < 0x1 >;
+				clocks = < &clkctl1 0x4 >;
+				mode = < 0x0 >;
+				input = < 0x0 >;
+				prescale = < 0x0 >;
+				label = "CTIMER_4";
+			};
+		};
+		flexspi: spi@134000 {
+			reg = < 0x5134000 0x1000 >, < 0x18000000 0x4000000 >;
+			compatible = "nxp,imx-flexspi";
+			interrupts = < 0x2a 0x0 >;
+			label = "FLEXSPI";
+			#address-cells = < 0x1 >;
+			#size-cells = < 0x0 >;
+			status = "okay";
+			ahb-prefetch;
+			ahb-read-addr-opt;
+			rx-clock-source = < 0x1 >;
+			is25wp064: is25wp064@0 {
+				compatible = "nxp,imx-flexspi-nor";
+				size = < 0x800000 >;
+				label = "IS25WP064";
+				reg = < 0x0 >;
+				spi-max-frequency = < 0x7ed6b40 >;
+				status = "okay";
+				jedec-id = [ 9D 70 17 ];
+				erase-block-size = < 0x1000 >;
+				write-block-size = < 0x1 >;
+				partitions {
+					compatible = "fixed-partitions";
+					#address-cells = < 0x1 >;
+					#size-cells = < 0x1 >;
+					boot_partition: partition@0 {
+						label = "mcuboot";
+						reg = < 0x0 0x10000 >;
+					};
+					slot0_partition: partition@10000 {
+						label = "image-0";
+						reg = < 0x10000 0x300000 >;
+					};
+					slot1_partition: partition@310000 {
+						label = "image-1";
+						reg = < 0x310000 0x300000 >;
+					};
+					scratch_partition: partition@610000 {
+						label = "image-scratch";
+						reg = < 0x610000 0x20000 >;
+					};
+					storage_partition: partition@630000 {
+						label = "storage";
+						reg = < 0x630000 0x1d0000 >;
+					};
+				};
+			};
+		};
+		nvic: interrupt-controller@e000e100 {
+			#address-cells = < 0x1 >;
+			compatible = "arm,v8m-nvic";
+			reg = < 0xe000e100 0xc00 >;
+			interrupt-controller;
+			#interrupt-cells = < 0x2 >;
+			arm,num-irq-priority-bits = < 0x3 >;
+			phandle = < 0x1 >;
+		};
+		systick: timer@e000e010 {
+			compatible = "arm,armv8m-systick";
+			reg = < 0xe000e010 0x10 >;
+			status = "disabled";
+		};
+	};
+	chosen {
+		zephyr,entropy = &trng;
+		zephyr,flash-controller = &flexspi;
+		zephyr,flash = &is25wp064;
+		zephyr,code-partition = &slot0_partition;
+		zephyr,sram = &sram0;
+		zephyr,console = &flexcomm0;
+		zephyr,shell-uart = &flexcomm0;
+	};
+	aliases {
+		sw0 = &user_button_1;
+		sw1 = &user_button_2;
+		led0 = &green_led;
+		led1 = &blue_led;
+		led2 = &red_led;
+		usart-0 = &flexcomm0;
+		pwm-0 = &sc_timer;
+		pwm-led0 = &green_pwm_led;
+		green-pwm-led = &green_pwm_led;
+		blue-pwm-led = &blue_pwm_led;
+		red-pwm-led = &red_pwm_led;
+		watchdog0 = &wwdt0;
+	};
+	cpus {
+		#address-cells = < 0x1 >;
+		#size-cells = < 0x0 >;
+		cpu0: cpu@0 {
+			compatible = "arm,cortex-m33f";
+			reg = < 0x0 >;
+			#address-cells = < 0x1 >;
+			#size-cells = < 0x1 >;
+			cpu-power-states = < &idle &suspend >;
+			mpu: mpu@e000ed90 {
+				compatible = "arm,armv8m-mpu";
+				reg = < 0xe000ed90 0x40 >;
+				arm,num-mpu-regions = < 0x8 >;
+			};
+		};
+	};
+	gpio_keys {
+		compatible = "gpio-keys";
+		user_button_1: button_0 {
+			label = "User SW1";
+			gpios = < &gpio1 0x1 0x1 >;
+			status = "okay";
+		};
+		user_button_2: button_1 {
+			label = "User SW2";
+			gpios = < &gpio0 0xa 0x1 >;
+			status = "okay";
+		};
+	};
+	leds {
+		compatible = "gpio-leds";
+		green_led: led_1 {
+			gpios = < &gpio0 0xe 0x0 >;
+			label = "User LED_GREEN";
+			status = "okay";
+		};
+		blue_led: led_2 {
+			gpios = < &gpio0 0x1a 0x0 >;
+			label = "User LED_BLUE";
+			status = "okay";
+		};
+		red_led: led_3 {
+			gpios = < &gpio0 0x1f 0x0 >;
+			label = "User LED_RED";
+			status = "okay";
+		};
+	};
+	pwmleds {
+		compatible = "pwm-leds";
+		green_pwm_led: green_pwm_led {
+			pwms = < &sc_timer 0x0 0x0 >;
+			label = "Green PWM LED";
+			status = "okay";
+		};
+		blue_pwm_led: blue_pwm_led {
+			pwms = < &sc_timer 0x6 0x0 >;
+			label = "Blue PWM LED";
+			status = "okay";
+		};
+		red_pwm_led: red_pwm_led {
+			pwms = < &sc_timer 0x6 0x0 >;
+			label = "Red PWM LED";
+			status = "disabled";
+		};
+	};
+	power-states {
+		idle: idle {
+			compatible = "zephyr,power-state";
+			power-state-name = "runtime-idle";
+			min-residency-us = < 0xa >;
+			phandle = < 0x5 >;
+		};
+		suspend: suspend {
+			compatible = "zephyr,power-state";
+			power-state-name = "suspend-to-idle";
+			min-residency-us = < 0x3e8 >;
+			phandle = < 0x6 >;
+		};
+	};
+};
