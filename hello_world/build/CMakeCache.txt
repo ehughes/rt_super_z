@@ -20,9 +20,6 @@ APPLICATION_BINARY_DIR:PATH=C:/ELI/rt_super_z/rt_super_z/hello_world/build
 //Application Source Directory
 APPLICATION_SOURCE_DIR:PATH=C:/ELI/rt_super_z/rt_super_z/hello_world
 
-//Selected board
-BOARD:STRING=rt_super
-
 //Path to a file.
 BOARD_DIR:PATH=C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super
 
