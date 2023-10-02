@@ -18,7 +18,11 @@ manifest:
       remote: nordic
       revision: main
       import: true
-   
+    - name: hal_nxp
+      revision: 904830e8f684a9fd573751a1cdecde877ec49242
+      path: modules/hal/nxp
+      groups:
+        - hal
   self:
     path: rt_super_z
     
