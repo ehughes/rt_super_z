@@ -5,14 +5,17 @@ manifest:
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: nordic
+      url-base: https://github.com/nrfconnect
 
   defaults:
     remote: zephyrproject-rtos
+    revision: main
 
   projects:
-    - name: zephyr
-      remote: zephyrproject-rtos
-      repo-path: zephyr
+    - name: sdk-nrf
+      path: nrf
+      remote: nordic
       revision: main
       import: true
    
