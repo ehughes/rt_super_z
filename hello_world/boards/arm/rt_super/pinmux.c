@@ -7,11 +7,11 @@
 #include <fsl_iopctl.h>
 #include <soc.h>
 
-static int rt_super_pinmux_init(const struct device *dev)
+static void rt_super_pinmux_init()
 {
-	ARG_UNUSED(dev);
 
-#if DT_NODE_HAS_COMPAT_STATUS(DT_NODELABEL(flexcomm0), nxp_lpc_usart, okay) && CONFIG_SERIAL
+
+
 	/* USART0 RX,  TX */
 	uint32_t port0_pin1_config = (/* Pin is configured as FC0_TXD_SCL_MISO_WS */
 			IOPCTL_PIO_FUNC1 |
@@ -54,7 +54,7 @@ static int rt_super_pinmux_init(const struct device *dev)
 			IOPCTL_PIO_INV_DI);
 	/* PORT0 PIN2 (coords: G4) is configured as FC0_RXD_SDA_MOSI_DATA */
 	IOPCTL_PinMuxSet(IOPCTL, 0U, 2U, port0_pin2_config);
-#endif
+
 
 #if DT_PHA_HAS_CELL(DT_ALIAS(sw0), gpios, pin)
 	uint32_t port1_pin1_config = (/* Pin is configured as PIO1_1 */

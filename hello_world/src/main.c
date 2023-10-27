@@ -50,13 +50,13 @@ static int monkey_handler(const struct shell *shell,
 SHELL_CMD_REGISTER(monkey, NULL, "It is super Moos", monkey_handler);
 
 
-void main(void)
+int main(void)
 {
 
 	LOG_INF("The RT685 SuperMonkey is running.");
 
 	while(1)
-	{
+	{  
 		k_sleep(K_MSEC(1000));
 	}
 }

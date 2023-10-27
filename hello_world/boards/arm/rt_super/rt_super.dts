@@ -7,7 +7,9 @@
 /dts-v1/;
 
 #include <nxp/nxp_rt6xx.dtsi>
-#include <dt-bindings/pwm/pwm.h>
+#include <zephyr/dt-bindings/pwm/pwm.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "rt_super.dtsi"
 
 / {
 	model = "NXP MIMXRT685-EVK board";
@@ -110,6 +112,8 @@
 	compatible = "nxp,lpc-usart";
 	status = "okay";
 	current-speed = <115200>;
+	pinctrl-0 = <&pinmux_flexcomm0_usart>;
+	pinctrl-names = "default";
 };
 
 /* I2S receive channel */
