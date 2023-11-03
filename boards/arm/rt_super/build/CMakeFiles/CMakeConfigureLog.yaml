@@ -1,0 +1,289 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/3.26.1/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/3.26.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-cd95sx"
+      binary: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-cd95sx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-cd95sx
+        
+        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_7ccc0 && [1/2] C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   -v -MD -MT CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_7ccc0.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        clang version LLVM for Renesas RL78 10.0.0.202209 
+        Target: rl78
+        Thread model: posix
+        InstalledDir: C:\\PROGRA~3\\LLVMFO~1.202\\bin
+         (in-process)
+         "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\bin\\\\clang.exe" -cc1 -triple rl78 -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mframe-pointer=none -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -nostdsysteminc -target-cpu RL78_S3 -fno-jump-tables -mllvm -combiner-store-merging -Wvla -fno-aligned-allocation -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209" -dependency-file "CMakeFiles\\\\cmTC_7ccc0.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\include" -internal-isystem "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\include" -fdebug-compilation-dir "C:\\\\ELI\\\\rt_super_z\\\\rt_super_z\\\\hello_world\\\\boards\\\\arm\\\\rt_super\\\\build\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-cd95sx" -ferror-limit 19 -fmessage-length 0 -mmirror-source-0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fno-common -finput-charset UTF-8 -fexec-charset UTF-8 -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        clang -cc1 version LLVM for Renesas RL78 10.0.0.202209 based upon LLVM 10.0.0 default target rl78
+        ignoring duplicate directory "C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\include"\x0d
+        #include "..." search starts here:\x0d
+        #include <...> search starts here:\x0d
+         C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\include\x0d
+         C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\..\\..\\..\\rl78\\include\x0d
+        End of search list.\x0d
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe  -v CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -o cmTC_7ccc0.exe -Wl,--out-implib,libcmTC_7ccc0.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: cmTC_7ccc0.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe  -v CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj -o cmTC_7ccc0.exe -Wl,--out-implib,libcmTC_7ccc0.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        clang version LLVM for Renesas RL78 10.0.0.202209 
+        Target: rl78
+        Thread model: posix
+        InstalledDir: C:\\PROGRA~3\\LLVMFO~1.202\\bin
+         "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\bin\\\\ld.lld" CMakeFiles/cmTC_7ccc0.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_7ccc0.dll.a --major-image-version 0 --minor-image-version 0 -Bstatic "-TC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\rl78.ld" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\crt0.o" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal\\\\clang_rt.crtbegin-rl78.obj" -lnosys -lc -lm -lclang_rt.builtins-rl78 "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal\\\\clang_rt.crtend-rl78.obj" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\crtn.o" "-LC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal" "-LC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3" -o cmTC_7ccc0.exe -no-threads
+        ld.lld: error: unknown argument '--out-implib'
+        ld.lld: error: unknown argument '--major-image-version'\x0d
+        ld.lld: error: unknown argument '--minor-image-version'\x0d
+        ld.lld: error: cannot open libcmTC_7ccc0.dll.a: no such file or directory\x0d
+        ld.lld: error: cannot open 0: no such file or directory\x0d
+        ld.lld: error: cannot open 0: no such file or directory\x0d
+        clang: error: ld.lld command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt"
+    checks:
+      - "Check for working C compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang.exe"
+    directories:
+      source: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-dx4kvj"
+      binary: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-dx4kvj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-dx4kvj
+        
+        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_4350e && [1/2] C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe    -MD -MT CMakeFiles/cmTC_4350e.dir/testCCompiler.c.obj -MF CMakeFiles\\cmTC_4350e.dir\\testCCompiler.c.obj.d -o CMakeFiles/cmTC_4350e.dir/testCCompiler.c.obj -c C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-dx4kvj/testCCompiler.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   CMakeFiles/cmTC_4350e.dir/testCCompiler.c.obj -o cmTC_4350e.exe -Wl,--out-implib,libcmTC_4350e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: cmTC_4350e.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   CMakeFiles/cmTC_4350e.dir/testCCompiler.c.obj -o cmTC_4350e.exe -Wl,--out-implib,libcmTC_4350e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        ld.lld: error: unknown argument '--out-implib'
+        ld.lld: error: unknown argument '--major-image-version'
+        ld.lld: error: unknown argument '--minor-image-version'
+        ld.lld: error: cannot open libcmTC_4350e.dll.a: no such file or directory
+        ld.lld: error: cannot open 0: no such file or directory
+        ld.lld: error: cannot open 0: no such file or directory
+        ld.lld: error: unable to find library -lkernel32
+        ld.lld: error: unable to find library -luser32
+        ld.lld: error: unable to find library -lgdi32
+        ld.lld: error: unable to find library -lwinspool\x0d
+        ld.lld: error: unable to find library -lshell32\x0d
+        ld.lld: error: unable to find library -lole32\x0d
+        ld.lld: error: unable to find library -loleaut32\x0d
+        ld.lld: error: unable to find library -luuid\x0d
+        ld.lld: error: unable to find library -lcomdlg32\x0d
+        ld.lld: error: unable to find library -ladvapi32\x0d
+        clang: error: ld.lld command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/3.26.1/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/3.26.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-qvzdel"
+      binary: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-qvzdel"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-qvzdel
+        
+        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_c38d2 && [1/2] C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   -v -MD -MT CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_c38d2.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        clang version LLVM for Renesas RL78 10.0.0.202209 
+        Target: rl78
+        Thread model: posix
+        InstalledDir: C:\\PROGRA~3\\LLVMFO~1.202\\bin
+         (in-process)
+         "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\bin\\\\clang.exe" -cc1 -triple rl78 -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mframe-pointer=none -fmath-errno -fno-rounding-math -masm-verbose -mconstructor-aliases -nostdsysteminc -target-cpu RL78_S3 -fno-jump-tables -mllvm -combiner-store-merging -Wvla -fno-aligned-allocation -dwarf-column-info -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209" -dependency-file "CMakeFiles\\\\cmTC_c38d2.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\include" -internal-isystem "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\include" -fdebug-compilation-dir "C:\\\\ELI\\\\rt_super_z\\\\rt_super_z\\\\hello_world\\\\boards\\\\arm\\\\rt_super\\\\build\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-qvzdel" -ferror-limit 19 -fmessage-length 0 -mmirror-source-0 -fgnuc-version=4.2.1 -fobjc-runtime=gcc -fno-common -finput-charset UTF-8 -fexec-charset UTF-8 -fdiagnostics-show-option -faddrsig -o CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -x c "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        clang -cc1 version LLVM for Renesas RL78 10.0.0.202209 based upon LLVM 10.0.0 default target rl78
+        ignoring duplicate directory "C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\include"\x0d
+        #include "..." search starts here:\x0d
+        #include <...> search starts here:\x0d
+         C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\include\x0d
+         C:\\PROGRA~3\\LLVMFO~1.202\\lib\\clang\\LLVM for Renesas RL78 10.0.0.202209\\..\\..\\..\\rl78\\include\x0d
+        End of search list.\x0d
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe  -v CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -o cmTC_c38d2.exe -Wl,--out-implib,libcmTC_c38d2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: cmTC_c38d2.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe  -v CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj -o cmTC_c38d2.exe -Wl,--out-implib,libcmTC_c38d2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        clang version LLVM for Renesas RL78 10.0.0.202209 
+        Target: rl78
+        Thread model: posix
+        InstalledDir: C:\\PROGRA~3\\LLVMFO~1.202\\bin
+         "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\bin\\\\ld.lld" CMakeFiles/cmTC_c38d2.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c38d2.dll.a --major-image-version 0 --minor-image-version 0 -Bstatic "-TC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\rl78.ld" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\crt0.o" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal\\\\clang_rt.crtbegin-rl78.obj" -lnosys -lc -lm -lclang_rt.builtins-rl78 "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal\\\\clang_rt.crtend-rl78.obj" "C:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3\\\\crtn.o" "-LC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\rl78\\\\s3\\\\lib\\\\baremetal" "-LC:\\\\PROGRA~3\\\\LLVMFO~1.202\\\\lib\\\\clang\\\\LLVM for Renesas RL78 10.0.0.202209\\\\..\\\\..\\\\..\\\\rl78\\\\lib\\\\s3" -o cmTC_c38d2.exe -no-threads
+        ld.lld: error: unknown argument '--out-implib'
+        ld.lld: error: unknown argument '--major-image-version'\x0d
+        ld.lld: error: unknown argument '--minor-image-version'\x0d
+        ld.lld: error: cannot open libcmTC_c38d2.dll.a: no such file or directory\x0d
+        ld.lld: error: cannot open 0: no such file or directory\x0d
+        ld.lld: error: cannot open 0: no such file or directory\x0d
+        clang: error: ld.lld command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt"
+    checks:
+      - "Check for working C compiler: C:/ProgramData/LLVM for Renesas RL78 10.0.0.202209/bin/clang.exe"
+    directories:
+      source: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-n8hevy"
+      binary: "C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-n8hevy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-n8hevy
+        
+        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_4a0cb && [1/2] C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe    -MD -MT CMakeFiles/cmTC_4a0cb.dir/testCCompiler.c.obj -MF CMakeFiles\\cmTC_4a0cb.dir\\testCCompiler.c.obj.d -o CMakeFiles/cmTC_4a0cb.dir/testCCompiler.c.obj -c C:/ELI/rt_super_z/rt_super_z/hello_world/boards/arm/rt_super/build/CMakeFiles/CMakeScratch/TryCompile-n8hevy/testCCompiler.c
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   CMakeFiles/cmTC_4a0cb.dir/testCCompiler.c.obj -o cmTC_4a0cb.exe -Wl,--out-implib,libcmTC_4a0cb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: cmTC_4a0cb.exe 
+        cmd.exe /C "cd . && C:\\PROGRA~3\\LLVMFO~1.202\\bin\\clang.exe   CMakeFiles/cmTC_4a0cb.dir/testCCompiler.c.obj -o cmTC_4a0cb.exe -Wl,--out-implib,libcmTC_4a0cb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        ld.lld: error: unknown argument '--out-implib'
+        ld.lld: error: unknown argument '--major-image-version'
+        ld.lld: error: unknown argument '--minor-image-version'
+        ld.lld: error: cannot open libcmTC_4a0cb.dll.a: no such file or directory
+        ld.lld: error: cannot open 0: no such file or directory
+        ld.lld: error: cannot open 0: no such file or directory
+        ld.lld: error: unable to find library -lkernel32
+        ld.lld: error: unable to find library -luser32
+        ld.lld: error: unable to find library -lgdi32
+        ld.lld: error: unable to find library -lwinspool\x0d
+        ld.lld: error: unable to find library -lshell32\x0d
+        ld.lld: error: unable to find library -lole32\x0d
+        ld.lld: error: unable to find library -loleaut32\x0d
+        ld.lld: error: unable to find library -luuid\x0d
+        ld.lld: error: unable to find library -lcomdlg32\x0d
+        ld.lld: error: unable to find library -ladvapi32\x0d
+        clang: error: ld.lld command failed with exit code 1 (use -v to see invocation)\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

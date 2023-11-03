@@ -3,10 +3,7 @@
 
 cmake_minimum_required(VERSION 3.13.1)
 
-
-# Re-direct the directory where the 'boards' directory is found from
-# $ZEPHYR_BASE to this directory.
-set(BOARD_ROOT ${CMAKE_CURRENT_LIST_DIR})
+list(APPEND BOARD_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../)
 
 set(BOARD rt_super)
 #set(BOARD mimxrt685_evk_cm33)

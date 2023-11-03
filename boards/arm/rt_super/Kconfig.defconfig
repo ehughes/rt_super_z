@@ -1,0 +1,50 @@
+# RT_SUPER board
+
+# Copyright (c) 2020, NXP
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_RT_SUPER
+
+config BOARD
+	default "rt_super"
+
+config XTAL_SYS_CLK_HZ
+	default 24000000
+
+config SYSOSC_SETTLING_US
+	default 260
+
+config FLASH_MCUX_FLEXSPI_NOR
+	default y if FLASH
+
+config FLASH_SIZE
+	default $(dt_node_int_prop_int,/soc/spi@134000/is25wp064@0,size,K)
+
+
+config FLASH_MCUX_FLEXSPI_XIP
+	default y if FLASH
+	depends on MEMC_MCUX_FLEXSPI
+
+config FLASH_MCUX_FLEXSPI_XIP
+	default y if FLASH
+
+choice FLASH_MCUX_FLEXSPI_XIP_MEM_TARGET
+	default FLASH_MCUX_FLEXSPI_XIP_MEM_SRAM
+endchoice
+
+
+if DMA_MCUX_LPC
+
+# Memory from the heap pool is used to allocate DMA descriptors for
+# channels that use multiple blocks for a DMA transfer.
+# Adjust HEAP_MEM_POOL_SIZE in case you need more memory.
+config HEAP_MEM_POOL_SIZE
+	default 4096
+
+endif # DMA_MCUX_LPC
+
+config DISK_DRIVER_SDMMC
+	default y if DISK_DRIVERS
+
+
+endif # BOARD_MIMXRT685_EVK

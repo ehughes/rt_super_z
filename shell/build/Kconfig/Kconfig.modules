@@ -1,0 +1,180 @@
+menu "nrf (C:/ELI/rt_super_z/nrf)"
+osource "C:/ELI/rt_super_z/nrf/Kconfig.nrf"
+config ZEPHYR_NRF_MODULE
+	bool
+	default y
+endmenu
+menu "hal_nxp (C:/ELI/rt_super_z/modules/hal/nxp)"
+osource "$(ZEPHYR_HAL_NXP_KCONFIG)"
+config ZEPHYR_HAL_NXP_MODULE
+	bool
+	default y
+endmenu
+menu "wfa-qt-control-app (C:/ELI/rt_super_z/modules/lib/wfa-qt-control-app)"
+osource "C:/ELI/rt_super_z/modules/lib/wfa-qt-control-app/zephyr/Kconfig"
+config ZEPHYR_WFA_QT_CONTROL_APP_MODULE
+	bool
+	default y
+endmenu
+menu "mcuboot (C:/ELI/rt_super_z/bootloader/mcuboot)"
+osource "$(ZEPHYR_MCUBOOT_KCONFIG)"
+config ZEPHYR_MCUBOOT_MODULE
+	bool
+	default y
+endmenu
+menu "mbedtls (C:/ELI/rt_super_z/modules/crypto/mbedtls)"
+osource "$(ZEPHYR_MBEDTLS_KCONFIG)"
+config ZEPHYR_MBEDTLS_MODULE
+	bool
+	default y
+endmenu
+menu "trusted-firmware-m (C:/ELI/rt_super_z/modules/tee/tf-m/trusted-firmware-m)"
+osource "$(ZEPHYR_TRUSTED_FIRMWARE_M_KCONFIG)"
+config ZEPHYR_TRUSTED_FIRMWARE_M_MODULE
+	bool
+	default y
+endmenu
+menu "cjson (C:/ELI/rt_super_z/modules/lib/cjson)"
+osource "$(ZEPHYR_CJSON_KCONFIG)"
+config ZEPHYR_CJSON_MODULE
+	bool
+	default y
+endmenu
+menu "azure-sdk-for-c (C:/ELI/rt_super_z/modules/lib/azure-sdk-for-c)"
+osource "$(ZEPHYR_AZURE_SDK_FOR_C_KCONFIG)"
+config ZEPHYR_AZURE_SDK_FOR_C_MODULE
+	bool
+	default y
+endmenu
+menu "cirrus-logic (C:/ELI/rt_super_z/modules/hal/cirrus-logic)"
+osource "C:/ELI/rt_super_z/modules/hal/cirrus-logic/Kconfig"
+config ZEPHYR_CIRRUS_LOGIC_MODULE
+	bool
+	default y
+endmenu
+menu "openthread (C:/ELI/rt_super_z/modules/lib/openthread)"
+osource "$(ZEPHYR_OPENTHREAD_KCONFIG)"
+config ZEPHYR_OPENTHREAD_MODULE
+	bool
+	default y
+endmenu
+menu "memfault-firmware-sdk (C:/ELI/rt_super_z/modules/lib/memfault-firmware-sdk)"
+osource "C:/ELI/rt_super_z/modules/lib/memfault-firmware-sdk/ports/zephyr/Kconfig"
+config ZEPHYR_MEMFAULT_FIRMWARE_SDK_MODULE
+	bool
+	default y
+endmenu
+menu "canopennode (C:/ELI/rt_super_z/modules/lib/canopennode)"
+osource "$(ZEPHYR_CANOPENNODE_KCONFIG)"
+config ZEPHYR_CANOPENNODE_MODULE
+	bool
+	default y
+endmenu
+menu "chre (C:/ELI/rt_super_z/modules/lib/chre)"
+osource "C:/ELI/rt_super_z/modules/lib/chre/platform/zephyr/Kconfig"
+config ZEPHYR_CHRE_MODULE
+	bool
+	default y
+endmenu
+menu "cmsis (C:/ELI/rt_super_z/modules/hal/cmsis)"
+osource "$(ZEPHYR_CMSIS_KCONFIG)"
+config ZEPHYR_CMSIS_MODULE
+	bool
+	default y
+endmenu
+menu "fatfs (C:/ELI/rt_super_z/modules/fs/fatfs)"
+osource "$(ZEPHYR_FATFS_KCONFIG)"
+config ZEPHYR_FATFS_MODULE
+	bool
+	default y
+endmenu
+menu "hal_nordic (C:/ELI/rt_super_z/modules/hal/nordic)"
+osource "$(ZEPHYR_HAL_NORDIC_KCONFIG)"
+config ZEPHYR_HAL_NORDIC_MODULE
+	bool
+	default y
+endmenu
+menu "liblc3 (C:/ELI/rt_super_z/modules/lib/liblc3)"
+osource "$(ZEPHYR_LIBLC3_KCONFIG)"
+config ZEPHYR_LIBLC3_MODULE
+	bool
+	default y
+endmenu
+menu "littlefs (C:/ELI/rt_super_z/modules/fs/littlefs)"
+osource "$(ZEPHYR_LITTLEFS_KCONFIG)"
+config ZEPHYR_LITTLEFS_MODULE
+	bool
+	default y
+endmenu
+menu "loramac-node (C:/ELI/rt_super_z/modules/lib/loramac-node)"
+osource "$(ZEPHYR_LORAMAC_NODE_KCONFIG)"
+config ZEPHYR_LORAMAC_NODE_MODULE
+	bool
+	default y
+endmenu
+menu "lvgl (C:/ELI/rt_super_z/modules/lib/gui/lvgl)"
+osource "C:/ELI/rt_super_z/modules/lib/gui/lvgl/Kconfig"
+config ZEPHYR_LVGL_MODULE
+	bool
+	default y
+endmenu
+menu "lz4 (C:/ELI/rt_super_z/modules/lib/lz4)"
+osource "$(ZEPHYR_LZ4_KCONFIG)"
+config ZEPHYR_LZ4_MODULE
+	bool
+	default y
+endmenu
+menu "nanopb (C:/ELI/rt_super_z/modules/lib/nanopb)"
+osource "$(ZEPHYR_NANOPB_KCONFIG)"
+config ZEPHYR_NANOPB_MODULE
+	bool
+	default y
+endmenu
+menu "picolibc (C:/ELI/rt_super_z/modules/lib/picolibc)"
+osource "C:/ELI/rt_super_z/modules/lib/picolibc/zephyr/Kconfig"
+config ZEPHYR_PICOLIBC_MODULE
+	bool
+	default y
+endmenu
+menu "segger (C:/ELI/rt_super_z/modules/debug/segger)"
+osource "$(ZEPHYR_SEGGER_KCONFIG)"
+config ZEPHYR_SEGGER_MODULE
+	bool
+	default y
+endmenu
+menu "TraceRecorder (C:/ELI/rt_super_z/modules/debug/TraceRecorder)"
+osource "C:/ELI/rt_super_z/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig"
+config ZEPHYR_TRACERECORDER_MODULE
+	bool
+	default y
+endmenu
+menu "uoscore-uedhoc (C:/ELI/rt_super_z/modules/lib/uoscore-uedhoc)"
+osource "$(ZEPHYR_UOSCORE_UEDHOC_KCONFIG)"
+config ZEPHYR_UOSCORE_UEDHOC_MODULE
+	bool
+	default y
+endmenu
+menu "zcbor (C:/ELI/rt_super_z/modules/lib/zcbor)"
+osource "$(ZEPHYR_ZCBOR_KCONFIG)"
+config ZEPHYR_ZCBOR_MODULE
+	bool
+	default y
+endmenu
+menu "zscilib (C:/ELI/rt_super_z/modules/lib/zscilib)"
+osource "C:/ELI/rt_super_z/modules/lib/zscilib/Kconfig.zscilib"
+config ZEPHYR_ZSCILIB_MODULE
+	bool
+	default y
+endmenu
+menu "nrfxlib (C:/ELI/rt_super_z/nrfxlib)"
+osource "C:/ELI/rt_super_z/nrfxlib/Kconfig.nrfxlib"
+config ZEPHYR_NRFXLIB_MODULE
+	bool
+	default y
+endmenu
+menu "connectedhomeip (C:/ELI/rt_super_z/modules/lib/matter)"
+osource "C:/ELI/rt_super_z/modules/lib/matter/config/nrfconnect/chip-module/Kconfig"
+config ZEPHYR_CONNECTEDHOMEIP_MODULE
+	bool
+	default y
+endmenu

@@ -1,49 +1,44 @@
 
-Breakpoint=C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c:31, State=BP_STATE_DISABLED
-Breakpoint=C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c:32, State=BP_STATE_DISABLED
-OpenDocument="syscall.h", FilePath="C:/ELI/rt_super_z/zephyr/include/syscall.h", Line=109
+
+OpenDocument="reset.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/reset.S", Line=0
+OpenDocument="OZONE.jdebug", FilePath="C:/ELI/rt_super_z/rt_super_z/hello_world/OZONE.jdebug", Line=0
 OpenDocument="fatal.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/fatal.c", Line=22
 OpenDocument="kswap.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/kswap.h", Line=182
-OpenDocument="exc.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/cortex_m/exc.h", Line=156
-OpenDocument="kernel_arch_func.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/kernel_arch_func.h", Line=44
+OpenDocument="exc.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/cortex_m/exc.h", Line=123
+OpenDocument="kernel_arch_func.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/kernel_arch_func.h", Line=13
 OpenDocument="cmsis_gcc.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/cmsis_gcc.h", Line=1145
-OpenDocument="thread_stack.h", FilePath="C:/ELI/rt_super_z/zephyr/include/kernel/thread_stack.h", Line=284
 OpenDocument="init.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/init.c", Line=305
 OpenDocument="core_cm33.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/core_cm33.h", Line=2569
 OpenDocument="irq_init.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c", Line=0
-OpenDocument="asm_inline_gcc.h", FilePath="C:/ELI/rt_super_z/zephyr/include/arch/arm/aarch32/asm_inline_gcc.h", Line=75
-OpenDocument="log_core.c", FilePath="C:/ELI/rt_super_z/zephyr/subsys/logging/log_core.c", Line=1214
+OpenDocument="log_core.c", FilePath="C:/ELI/rt_super_z/zephyr/subsys/logging/log_core.c", Line=851
 OpenDocument="fault.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault.c", Line=1033
-OpenDocument="fault_s.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault_s.S", Line=64
+OpenDocument="fault_s.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault_s.S", Line=33
 OpenDocument="ksched.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/ksched.h", Line=147
-OpenDocument="main.c", FilePath="C:/ELI/rt_super_z/rt_super_z/hello_world/src/main.c", Line=0
-OpenDocument="cpu_idle.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cpu_idle.S", Line=97
+OpenDocument="cpu_idle.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cpu_idle.S", Line=125
 OpenDocument="prep_c.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/prep_c.c", Line=143
-OpenDocument="reset.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/reset.S", Line=94
+OpenDocument="main.c", FilePath="C:/ELI/rt_super_z/rt_super_z/hello_world/src/main.c", Line=0
 OpenDocument="device.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/device.c", Line=54
-OpenDocument="fsl_iopctl.h", FilePath="c:/eli/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_iopctl.h", Line=55
 OpenDocument="uart_mcux_flexcomm.c", FilePath="C:/ELI/rt_super_z/zephyr/drivers/serial/uart_mcux_flexcomm.c", Line=45
-OpenDocument="time_units.h", FilePath="C:/ELI/rt_super_z/zephyr/include/sys/time_units.h", Line=50
-OpenDocument="fsl_usart.h", FilePath="c:/eli/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_usart.h", Line=376
-OpenDocument="fsl_ostimer.c", FilePath="C:/ELI/rt_super_z/modules/hal/nxp/mcux/drivers/imxrt6xx/fsl_ostimer.c", Line=342
 OpenDocument="banner.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/banner.c", Line=0
 OpenDocument="stdout_console.c", FilePath="C:/ELI/rt_super_z/zephyr/lib/libc/minimal/source/stdout/stdout_console.c", Line=0
-OpenDocument="fsl_power.h", FilePath="C:/ELI/rt_super_z/modules/hal/nxp/mcux/devices/MIMXRT685S/fsl_power.h", Line=289
 OpenToolbar="Debug", Floating=0, x=0, y=0
-OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=91, h=209, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=91, h=159, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=0, w=218, h=179, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
-OpenWindow="Functions", DockArea=LEFT, x=0, y=1, w=218, h=173, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Memory Usage", DockArea=BOTTOM, x=0, y=0, w=644, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=181, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=1, w=218, h=173, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
-OpenWindow="Console", DockArea=BOTTOM, x=2, y=0, w=178, h=140, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[431;124;87;110;590]
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=481, h=596, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=481, h=477, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=1, w=464, h=418, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=0, w=464, h=222, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=2, w=464, h=416, TabPos=1, TopOfStack=1, FilterBarShown=1, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory Usage", DockArea=BOTTOM, x=0, y=0, w=811, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=226, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=2, w=464, h=416, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Console", DockArea=BOTTOM, x=2, y=0, w=225, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
 TableHeader="Data Sampling Table", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
 TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[100;100;100;100;100;100;100;100;100]
 TableHeader="Vector Catches", SortCol="None", SortOrder="ASCENDING", VisibleCols=["";"Vector Catch";"Description"], ColWidths=[50;300;500]
-TableHeader="Break & Tracepoints", SortCol="Type", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[50;93;127;320]
-TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Source"], ColWidths=[280;380]
+TableHeader="Break & Tracepoints", SortCol="Type", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[50;93;127;194]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Source"], ColWidths=[280;201]
 TableHeader="Power Sampling", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[412;199;389;100]
 TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
-TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;320]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[431;124;87;110;100]
+WatchedExpression="monkey_handler(const struct shell*", Window=Watched Data 1

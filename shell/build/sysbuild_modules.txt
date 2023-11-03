@@ -1,0 +1,1 @@
+"nrf":"C:/ELI/rt_super_z/nrf":"C:/ELI/rt_super_z/nrf/sysbuild"

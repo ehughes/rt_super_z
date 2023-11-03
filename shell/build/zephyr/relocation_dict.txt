@@ -1,0 +1,1 @@
+|RAM:COPY:C:/ELI/rt_super_z/zephyr/soc/arm/nxp_imx/rt6xx/flash_clock_setup.c|RAM_TEXT:COPY:C:/ELI/rt_super_z/zephyr/drivers/flash/flash_mcux_flexspi_nor.c|RAM_TEXT:COPY:C:/ELI/rt_super_z/zephyr/drivers/memc/memc_mcux_flexspi.c|RAM_TEXT:COPY:C:/ELI/rt_super_z/modules/hal/nxp/mcux/mcux-sdk/drivers/flexspi/fsl_flexspi.c

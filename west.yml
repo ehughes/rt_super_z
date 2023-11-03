@@ -6,7 +6,7 @@ manifest:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
     - name: nordic
-      url-base: https://github.com/nrfconnect
+      url-base: https://github.com/krish2718
 
   defaults:
     remote: zephyrproject-rtos
@@ -16,7 +16,7 @@ manifest:
     - name: sdk-nrf
       path: nrf
       remote: nordic
-      revision: main
+      revision: ad912fcfdd0b82b75c75c09ea06feb32b664353f
       import: true
     - name: hal_nxp
       revision: 904830e8f684a9fd573751a1cdecde877ec49242
