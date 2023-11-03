@@ -1,0 +1,2 @@
+osource "C:/ELI/rt_super_z/rt_super_z/wifi_shell/..//boards/shields/*/Kconfig.shield"
+osource "C:/ELI/rt_super_z/nrf/boards/shields/*/Kconfig.shield"

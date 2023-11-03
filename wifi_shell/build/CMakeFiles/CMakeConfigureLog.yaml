@@ -1,0 +1,163 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:199 (message)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:128 (project)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      The target system is: Generic - 3.4.99 - arm
+      The host system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:128 (project)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/Users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.exe: c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib\\libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:128 (project)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/3.26.1/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:128 (project)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/Users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.exe: c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib\\libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:128 (project)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/3.26.1/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/kernel.cmake:134 (enable_language)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/zephyr_default.cmake:138 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "C:/ELI/rt_super_z/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:14 (find_package)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.16.0) 12.2.0
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2003 (check_c_compiler_flag)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:1095 (check_compiler_flag)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2042 (zephyr_check_compiler_flag)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2018 (target_cc_option_fallback)"
+      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:122 (target_cc_option)"
+      - "C:/ELI/rt_super_z/zephyr/CMakeLists.txt:465 (zephyr_cc_option)"
+    directories:
+      source: "C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0"
+      binary: "C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/ELI/rt_super_z/nrf/cmake/modules;C:/ELI/rt_super_z/zephyr/cmake/modules"
+    buildResult:
+      variable: "check_fmacro_prefix_map_C__ELI_rt_super_z_rt_super_z_wifi_shell_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0"
+      cached: true
+      stdout: |
+        Change Dir: C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0
+        
+        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_e51a6 && [1/2] C:\\Users\\emh20\\zephyr-sdk-0.16.0\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -Dcheck_fmacro_prefix_map_C__ELI_rt_super_z_rt_super_z_wifi_shell_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0  -nostartfiles -nostdlib -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0   -fmacro-prefix-map=C:/ELI/rt_super_z/rt_super_z/wifi_shell=CMAKE_SOURCE_DIR -o CMakeFiles/cmTC_e51a6.dir/src.c.obj -c C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0/src.c
+        [2/2] cmd.exe /C "cd . && C:\\Users\\emh20\\zephyr-sdk-0.16.0\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -nostartfiles -nostdlib -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0  CMakeFiles/cmTC_e51a6.dir/src.c.obj -o cmTC_e51a6   && cd ."
+        
+      exitCode: 0
+...
