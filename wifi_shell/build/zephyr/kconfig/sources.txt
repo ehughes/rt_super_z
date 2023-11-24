@@ -305,6 +305,7 @@ C:\ELI\rt_super_z\nrfxlib\nrf_modem\Kconfig
 C:\ELI\rt_super_z\nrfxlib\nrf_rpc\Kconfig
 C:\ELI\rt_super_z\nrfxlib\openthread\Kconfig
 C:\ELI\rt_super_z\nrfxlib\zboss\Kconfig
+C:\ELI\rt_super_z\rt_super_z\boards\arm\rt_super\Kconfig
 C:\ELI\rt_super_z\rt_super_z\boards\arm\rt_super\Kconfig.board
 C:\ELI\rt_super_z\rt_super_z\boards\arm\rt_super\Kconfig.defconfig
 C:\ELI\rt_super_z\rt_super_z\wifi_shell\build\Kconfig\Kconfig.dts

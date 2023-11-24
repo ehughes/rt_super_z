@@ -73,6 +73,7 @@
 						};
 					};
 					pinmux_flexcomm3_i2s: pinmux_flexcomm3_i2s {
+						phandle = < 0x5 >;
 						group0 {
 							pinmux = < 0x1700001 >, < 0x1600001 >, < 0x1500001 >;
 							input-enable;
@@ -94,7 +95,7 @@
 						};
 					};
 					pinmux_flexcomm5_spi: pinmux_flexcomm5_spi {
-						phandle = < 0x5 >;
+						phandle = < 0x6 >;
 						group0 {
 							pinmux = < 0x2300001 >, < 0x2400001 >, < 0x2500001 >, < 0x2600001 >;
 							input-enable;
@@ -200,7 +201,7 @@
 				#gpio-cells = < 0x2 >;
 				port = < 0x0 >;
 				status = "okay";
-				phandle = < 0xb >;
+				phandle = < 0xc >;
 			};
 			gpio1: gpio@1 {
 				compatible = "nxp,lpc-gpio";
@@ -210,7 +211,7 @@
 				#gpio-cells = < 0x2 >;
 				port = < 0x1 >;
 				status = "okay";
-				phandle = < 0xa >;
+				phandle = < 0xb >;
 			};
 			gpio2: gpio@2 {
 				compatible = "nxp,lpc-gpio";
@@ -219,7 +220,7 @@
 				#gpio-cells = < 0x2 >;
 				port = < 0x2 >;
 				status = "okay";
-				phandle = < 0x7 >;
+				phandle = < 0x8 >;
 			};
 			gpio3: gpio@3 {
 				compatible = "nxp,lpc-gpio";
@@ -276,12 +277,18 @@
 				clocks = < &clkctl1 0x2 >;
 				status = "disabled";
 			};
-			flexcomm3: flexcomm@109000 {
-				compatible = "nxp,lpc-flexcomm";
+			flexcomm3: i2s1: flexcomm@109000 {
+				compatible = "nxp,lpc-i2s";
 				reg = < 0x109000 0x1000 >;
 				interrupts = < 0x11 0x0 >;
 				clocks = < &clkctl1 0x3 >;
-				status = "disabled";
+				status = "okay";
+				#address-cells = < 0x1 >;
+				#size-cells = < 0x0 >;
+				dmas = < &dma0 0x7 >;
+				dma-names = "tx";
+				pinctrl-0 = < &pinmux_flexcomm3_i2s >;
+				pinctrl-names = "default";
 			};
 			flexcomm4: flexcomm@122000 {
 				compatible = "nxp,lpc-flexcomm";
@@ -613,13 +620,13 @@
 				compatible = "zephyr,power-state";
 				power-state-name = "runtime-idle";
 				min-residency-us = < 0xa >;
-				phandle = < 0x8 >;
+				phandle = < 0x9 >;
 			};
 			suspend: suspend {
 				compatible = "zephyr,power-state";
 				power-state-name = "suspend-to-idle";
 				min-residency-us = < 0x3e8 >;
-				phandle = < 0x9 >;
+				phandle = < 0xa >;
 			};
 		};
 	};
@@ -660,7 +667,7 @@
 		gpio-map-mask = < 0xffffffff 0xffffffc0 >;
 		gpio-map-pass-thru = < 0x0 0x3f >;
 		gpio-map = < 0x0 0x0 &gpio0 0x5 0x0 >, < 0x1 0x0 &gpio0 0x6 0x0 >, < 0x2 0x0 &gpio0 0x13 0x0 >, < 0x3 0x0 &gpio0 0x14 0x0 >, < 0x4 0x0 &gpio0 0x11 0x0 >, < 0x5 0x0 &gpio0 0x12 0x0 >, < 0x6 0x0 &gpio0 0xf 0x0 >, < 0x7 0x0 &gpio0 0xe 0x0 >, < 0x8 0x0 &gpio0 0x1c 0x0 >, < 0x9 0x0 &gpio0 0x1b 0x0 >, < 0xa 0x0 &gpio1 0x0 0x0 >, < 0xb 0x0 &gpio1 0xa 0x0 >, < 0xc 0x0 &gpio1 0x2 0x0 >, < 0xd 0x0 &gpio0 0xb 0x0 >, < 0xe 0x0 &gpio1 0x9 0x0 >, < 0xf 0x0 &gpio1 0x7 0x0 >, < 0x10 0x0 &gpio1 0x6 0x0 >, < 0x11 0x0 &gpio1 0x5 0x0 >, < 0x12 0x0 &gpio1 0x4 0x0 >, < 0x13 0x0 &gpio1 0x3 0x0 >, < 0x14 0x0 &gpio0 0x11 0x0 >, < 0x15 0x0 &gpio0 0x12 0x0 >;
-		phandle = < 0x6 >;
+		phandle = < 0x7 >;
 	};
 	power-states {
 	};

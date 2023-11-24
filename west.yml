@@ -6,7 +6,7 @@ manifest:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
     - name: nordic
-      url-base: https://github.com/krish2718
+      url-base: https://github.com/nrfconnect
 
   defaults:
     remote: zephyrproject-rtos
@@ -19,7 +19,7 @@ manifest:
       revision: ad912fcfdd0b82b75c75c09ea06feb32b664353f
       import: true
     - name: hal_nxp
-      revision: 904830e8f684a9fd573751a1cdecde877ec49242
+      revision: 69046233b7a7fac3138ae4dd5bcf6158e82529bb
       path: modules/hal/nxp
       groups:
         - hal

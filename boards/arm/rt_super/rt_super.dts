@@ -63,6 +63,9 @@
 		};
 	};
 
+
+
+
 	arduino_header: arduino-connector {
 		compatible = "arduino-header-r3";
 		#gpio-cells = <2>;
@@ -94,6 +97,19 @@
 	power-states {
 	};
 };
+
+
+	/* I2S transmit channel */
+i2s1: &flexcomm3 {
+		status = "okay";
+		compatible = "nxp,lpc-i2s";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		dmas = <&dma0 7>;
+		dma-names = "tx";
+		pinctrl-0 = <&pinmux_flexcomm3_i2s>;
+		pinctrl-names = "default";
+	};
 
 &cpu0 {
 };

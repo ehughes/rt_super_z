@@ -779,6 +779,9 @@
   };
  };
 
+
+
+
  arduino_header: arduino-connector {
   compatible = "arduino-header-r3";
   #gpio-cells = <2>;
@@ -810,6 +813,19 @@
  power-states {
  };
 };
+
+
+
+i2s1: &flexcomm3 {
+  status = "okay";
+  compatible = "nxp,lpc-i2s";
+  #address-cells = <1>;
+  #size-cells = <0>;
+  dmas = <&dma0 7>;
+  dma-names = "tx";
+  pinctrl-0 = <&pinmux_flexcomm3_i2s>;
+  pinctrl-names = "default";
+ };
 
 &cpu0 {
 };
@@ -908,7 +924,7 @@ arduino_spi: &flexcomm5 {
 };
 
 &dma0 {
-# 203 "C:/ELI/rt_super_z/rt_super_z/boards/arm/rt_super/rt_super.dts"
+# 219 "C:/ELI/rt_super_z/rt_super_z/boards/arm/rt_super/rt_super.dts"
  dma-channels = <20>;
  status = "okay";
 };

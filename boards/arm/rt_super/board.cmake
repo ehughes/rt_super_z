@@ -7,3 +7,5 @@
 board_runner_args(jlink "--device=MIMXRT685SFAWBR" "--reset-after-load")
 
 include(${ZEPHYR_BASE}/boards/common/jlink.board.cmake)
+
+

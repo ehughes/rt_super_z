@@ -1,12 +1,12 @@
 {
     "__net_socket": [
-        "net_context",
         "modem_socket",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
         "tls_context",
-        "websocket_context"
+        "websocket_context",
+        "net_context"
     ],
     "__subsystem": [
         "entropy_driver_api",

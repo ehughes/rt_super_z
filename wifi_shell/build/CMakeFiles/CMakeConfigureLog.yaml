@@ -130,34 +130,4 @@ events:
       This is free software; see the source for copying conditions.  There is NO
       warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
       
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
-      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2003 (check_c_compiler_flag)"
-      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:1095 (check_compiler_flag)"
-      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2042 (zephyr_check_compiler_flag)"
-      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:2018 (target_cc_option_fallback)"
-      - "C:/ELI/rt_super_z/zephyr/cmake/modules/extensions.cmake:122 (target_cc_option)"
-      - "C:/ELI/rt_super_z/zephyr/CMakeLists.txt:465 (zephyr_cc_option)"
-    directories:
-      source: "C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0"
-      binary: "C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0"
-    cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/ELI/rt_super_z/nrf/cmake/modules;C:/ELI/rt_super_z/zephyr/cmake/modules"
-    buildResult:
-      variable: "check_fmacro_prefix_map_C__ELI_rt_super_z_rt_super_z_wifi_shell_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0"
-      cached: true
-      stdout: |
-        Change Dir: C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0
-        
-        Run Build Command(s):C:/ProgramData/chocolatey/bin/ninja.exe -v cmTC_e51a6 && [1/2] C:\\Users\\emh20\\zephyr-sdk-0.16.0\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -Dcheck_fmacro_prefix_map_C__ELI_rt_super_z_rt_super_z_wifi_shell_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__users_emh20_zephyr_sdk_0_16_0_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0  -nostartfiles -nostdlib -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0   -fmacro-prefix-map=C:/ELI/rt_super_z/rt_super_z/wifi_shell=CMAKE_SOURCE_DIR -o CMakeFiles/cmTC_e51a6.dir/src.c.obj -c C:/ELI/rt_super_z/rt_super_z/wifi_shell/build/CMakeFiles/CMakeScratch/TryCompile-fuv0c0/src.c
-        [2/2] cmd.exe /C "cd . && C:\\Users\\emh20\\zephyr-sdk-0.16.0\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -nostartfiles -nostdlib -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/users/emh20/zephyr-sdk-0.16.0/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0  CMakeFiles/cmTC_e51a6.dir/src.c.obj -o cmTC_e51a6   && cd ."
-        
-      exitCode: 0
 ...
