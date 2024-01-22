@@ -1,0 +1,3 @@
+C:/ELI/rt_super_sw/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/cm33/armgcc/CMakeFiles/dsp_hello_world_usart_cm33.elf.dir
+C:/ELI/rt_super_sw/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/cm33/armgcc/CMakeFiles/edit_cache.dir
+C:/ELI/rt_super_sw/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/cm33/armgcc/CMakeFiles/rebuild_cache.dir

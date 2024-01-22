@@ -7,22 +7,27 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: nordic
       url-base: https://github.com/nrfconnect
+    - name: ehughes
+      url-base: https://github.com/ehughes
+
 
   defaults:
     remote: zephyrproject-rtos
     revision: main
 
   projects:
-    - name: sdk-nrf
-      path: nrf
-      remote: nordic
-      revision: ad912fcfdd0b82b75c75c09ea06feb32b664353f
+
+    - name: zephyr
+      remote: zephyrproject-rtos
+      repo-path: zephyr
+      revision: main
       import: true
-    - name: hal_nxp
-      revision: 69046233b7a7fac3138ae4dd5bcf6158e82529bb
-      path: modules/hal/nxp
-      groups:
-        - hal
+    - name: egfx
+      remote: ehughes
+      repo-path: egfx
+      revision: v2.0
+     
+      
   self:
     path: rt_super_z
     

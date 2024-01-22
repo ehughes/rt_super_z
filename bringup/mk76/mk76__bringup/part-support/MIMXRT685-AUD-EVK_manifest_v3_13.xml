@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:manifest xmlns:ns2="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd" format_version="3.13" api_version="2.0.0" configuration="474382bd4cd84d3af05a7cb37eb90031" id="SDK_2.x_MIMXRT685-AUD-EVK" name="MIMXRT685-AUD-EVK" brief="This is SDK version 2.14.0 manifest file. It describes the content of the MIMXRT685-AUD-EVK and additional settings for tools that support SDK version 2.14.0">
+    <externalDefinitions>
+        <definition extID="evkmimxrt685"/>
+        <definition extID="mimxrt685audevk_tfm_demo_s"/>
+        <definition extID="mimxrt685audevk_tfm_regression_s"/>
+    </externalDefinitions>
+    <ksdk id="MCUXpresso2140" name="MCUXpresso2140" version="2.14.0" revision="724 2023-07-28"/>
+    <compilers>
+        <compiler type="gcc" id="compiler_gcc" name="gcc"/>
+    </compilers>
+    <toolchainSettings>
+        <toolchainSetting id="com.nxp.mcuxpresso" name="mcuxpresso" full_name="MCUXpresso IDE" version="11.8.0" toolchain="mcuxpresso" compiler="compiler_gcc">
+            <option id="gnu.cpp.compiler.option.optimization.flags" type="string" user_name="">
+                <value>-fno-common</value>
+            </option>
+            <option id="gnu.c.compiler.option.optimization.flags" type="string" user_name="">
+                <value>-fno-common</value>
+            </option>
+            <option id="gnu.cpp.link.option.nostdlibs" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="com.crt.advproject.link.cpp.flashconfigenable" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="com.crt.advproject.link.flashconfigenable" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="gnu.c.link.option.nostdlibs" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+        </toolchainSetting>
+    </toolchainSettings>
+    <toolchains>
+        <toolchain type="mcuxpresso" vendor="NXP Semiconductors" vendor_url="http://www.nxp.com" id="mcuxpresso" name="MCUXpresso_IDE" full_name="MCUXpresso IDE" version="11.8.0" compiler="compiler_gcc">
+            <debug>
+                <debug_configuration probe="LinkServer" id="com.crt.advproject.config.exe.release" name="Release Configuration">
+                    <scripts>
+                        <script type="init" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>
+set remotetimeout 60000
+##target_extended_remote##
+set mem inaccessible-by-default ${mem.access}
+mon ondisconnect ${ondisconnect}
+set arm force-mode thumb
+${load}</script>
+                        </script>
+                        <script type="run" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>${run}</script>
+                        </script>
+                    </scripts>
+                    <params>
+                        <params value="false" id="vector.catch.release.mcuxpresso" name="vector.catch"/>
+                        <params value="Disable" id="internal.cache.release.mcuxpresso" name="internal.cache"/>
+                    </params>
+                </debug_configuration>
+                <debug_configuration probe="LinkServer" id="com.crt.advproject.config.exe.debug" name="Debug Configuration">
+                    <scripts>
+                        <script type="init" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>
+set remotetimeout 60000
+##target_extended_remote##
+set mem inaccessible-by-default ${mem.access}
+mon ondisconnect ${ondisconnect}
+set arm force-mode thumb
+${load}</script>
+                        </script>
+                        <script type="run" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>${run}</script>
+                        </script>
+                    </scripts>
+                    <params>
+                        <params value="false" id="vector.catch.debug.mcuxpresso" name="vector.catch"/>
+                        <params value="Disable" id="internal.cache.debug.mcuxpresso" name="internal.cache"/>
+                    </params>
+                </debug_configuration>
+                <debug_configuration probe="Segger" id="com.nxp.mcuxpresso.core.debug.support.segger.debug" name="Debug Configuration"/>
+                <debug_configuration probe="Segger" id="com.nxp.mcuxpresso.core.debug.support.segger.release" name="Release Configuration"/>
+            </debug>
+        </toolchain>
+    </toolchains>
+    <boards>
+        <board package="MIMXRT685SFVKB" id="mimxrt685audevk" name="MIMXRT685-AUD-EVK" version="1.0.0">
+            <description>i.MX RT600 Audio Evaluation Kit</description>
+            <image path="boards/mimxrt685audevk" type="image">
+                <files mask="mimxrt685audevk.png"/>
+            </image>
+            <memory>
+                <memoryBlock addr="08000000" size="00800000" type="ExtFlash" access="RO" id="QSPI_FLASH_mimxrt685audevk" name="QSPI_FLASH"/>
+            </memory>
+            <debug_configurations>
+                <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+                    <drivers>
+                        <driver id_refs="QSPI_FLASH_mimxrt685audevk">
+                            <driverBinary path="devices/RT685/mcuxpresso" type="binary">
+<files mask="MIMXRT600_FlexSPI_B_SFDP_QSPI.cfx"/>
+                            </driverBinary>
+                        </driver>
+                    </drivers>
+                </debug_configuration>
+            </debug_configurations>
+        </board>
+        <board package="MIMXRT685SFVKB" type="kit" id="mimxrt685audevk_om13790host" name="MIMXRT685-AUD-EVK-OM13790HOST" href="https://www.nxp.com/pip/OM13790" version="1.0.0">
+            <description>i.MX RT600 Audio Evaluation Kit with USB Type-C Host Shield Board Gen 2 with Display Port Alt Mode</description>
+            <image path="boards/mimxrt685audevk_om13790host" type="image">
+                <files mask="mimxrt685audevk_om13790host.png"/>
+            </image>
+            <memory>
+                <memoryBlock addr="08000000" size="00800000" type="ExtFlash" access="RO" id="QSPI_FLASH_mimxrt685audevk_om13790host" name="QSPI_FLASH"/>
+            </memory>
+            <debug_configurations>
+                <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+                    <drivers>
+                        <driver id_refs="QSPI_FLASH_mimxrt685audevk_om13790host">
+                            <driverBinary path="devices/RT685/mcuxpresso" type="binary">
+<files mask="MIMXRT600_FlexSPI_B_SFDP_QSPI.cfx"/>
+                            </driverBinary>
+                        </driver>
+                    </drivers>
+                </debug_configuration>
+            </debug_configurations>
+        </board>
+    </boards>
+    <devices>
+        <device family="MIMXRT600" platform="i.MX" id="MIMXRT685S" name="MIMXRT685S" full_name="MIMXRT685S" version="1.0.0">
+            <description>i.MX MIMXRT685S 275MHz, 4.5M SRAM Microcontrollers (MCUs) based on ARM Cortex-M33 Core</description>
+            <metadataSet>
+                <metadata key="compatible_device.segger" value="MIMXRT685S_M33"/>
+                <metadata key="compatible_device.pemicro" value="MIMXRT685S"/>
+                <metadata key="vendor.device.multicore" value="true"/>
+                <metadata key="vendor" value="NXP"/>
+            </metadataSet>
+            <defines>
+                <define name="CPU_$|package|" value=""/>
+                <define name="CPU_$|package|_$|core|" value=""/>
+            </defines>
+            <core fpu="true" dsp="true" type="cm33" boot_role="primary" id="cm33_MIMXRT685S" name="cm33"/>
+            <memory>
+                <memoryBlock addr="00080000" size="00180000" type="RAM" access="RW" id="SRAM_MIMXRT685S" name="SRAM"/>
+                <memoryBlock addr="00000000" size="00020000" type="RAM" access="RW" id="SRAM_ROM_MIMXRT685S" name="SRAM_ROM"/>
+                <memoryBlock addr="00020000" size="00060000" type="RAM" access="RW" id="SRAM_SHARED_MIMXRT685S" name="SRAM_SHARED"/>
+                <memoryBlock addr="00200000" size="00280000" type="RAM" access="RW" id="SRAM_DSP_MIMXRT685S" name="SRAM_DSP"/>
+                <memoryBlock addr="40140000" size="00004000" type="RAM" access="RW" id="USB_RAM_MIMXRT685S" name="USB_RAM"/>
+            </memory>
+            <total_memory flash_size_kb="0" ram_size_kb="16"/>
+            <package id="MIMXRT685SFVKB" name="MIMXRT685SFVKB"/>
+            <package id="MIMXRT685SFFOB" name="MIMXRT685SFFOB"/>
+            <package id="MIMXRT685SFAWBR" name="MIMXRT685SFAWBR"/>
+            <evaluation_boards>
+                <evaluation_board name="mimxrt685audevk"/>
+            </evaluation_boards>
+            <debug_configurations>
+                <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+                    <params>
+                        <params value="SWD" id="internal.wiretype.release.MIMXRT685S" name="internal.wiretype"/>
+                        <params value="true" id="internal.has_swo.release.MIMXRT685S" name="internal.has_swo"/>
+                        <params value="--bootromstall 0x50002034" id="misc.options.MIMXRT685S" name="misc.options"/>
+                    </params>
+                </debug_configuration>
+            </debug_configurations>
+            <linkerSettings nature="c_nature">
+                <linker property="start_symbol" value="ResetISR"/>
+                <linker property="text_align" value="4"/>
+                <linker property="data_align" value="4"/>
+                <linker property="bss_align" value="4"/>
+                <linker property="mtb_supported" value="false"/>
+            </linkerSettings>
+            <linkerSettings nature="cpp_nature">
+                <linker property="start_symbol" value="ResetISR"/>
+                <linker property="text_align" value="4"/>
+                <linker property="data_align" value="4"/>
+                <linker property="bss_align" value="4"/>
+                <linker property="mtb_supported" value="false"/>
+            </linkerSettings>
+        </device>
+    </devices>
+    <components>
+        <component user_visible="true" type="debugger" devices="MIMXRT685S" package_base_path="devices/MIMXRT685S" project_base_path="svd" id="platform.devices.MIMXRT685S_debugger.MIMXRT685S" name="MIMXRT685S" full_name="Device MIMXRT685S_debugger" brief="Device MIMXRT685S_debugger" version="1.0.0">
+            <source relative_path="./" type="xml">
+                <files mask="MIMXRT685S_cm33.xml"/>
+            </source>
+        </component>
+    </components>
+</ns2:manifest>

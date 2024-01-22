@@ -26,7 +26,7 @@ Project.SetOSPlugin("ZephyrPlugin_CM4");
   //
   Project.AddPathSubstitute ("C:/ELI/rt_super_sw/SuperMonkeyGFX", "$(ProjectDir)");
   Project.AddPathSubstitute ("c:/eli/rt_super_sw/supermonkeygfx", "$(ProjectDir)");
-  Project.SetDevice ("MIMXRT685SFAWBR");
+  Project.SetDevice ("MIMXRT685");
   Project.SetHostIF ("USB", "");
   Project.SetTargetIF ("SWD");
   Project.SetTIFSpeed ("4 MHz");

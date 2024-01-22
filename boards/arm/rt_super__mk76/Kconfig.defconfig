@@ -1,0 +1,16 @@
+if BOARD_RT_SUPER__MK76
+
+config BOARD
+	default "rt_super__mk76"
+
+config XTAL_SYS_CLK_HZ
+	default 24000000
+
+config SYSOSC_SETTLING_US
+	default 260
+
+choice FLASH_MCUX_FLEXSPI_XIP_MEM_TARGET
+	default FLASH_MCUX_FLEXSPI_XIP_MEM_SRAM
+endchoice
+
+endif # BOARD_MIMXRT685_EVK

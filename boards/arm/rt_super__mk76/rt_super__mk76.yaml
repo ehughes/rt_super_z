@@ -1,0 +1,34 @@
+#
+# Copyright (c) 2020, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+identifier: rt_super__mk76
+name: NXP RT Super Monkey in mk76 form factor
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 4608
+flash: 8192
+supported:
+  - arduino_gpio
+  - arduino_i2c
+  - arduino_serial
+  - arduino_spi
+  - counter
+  - dma
+  - pwm
+  - gpio
+  - hwinfo
+  - i2c
+  - i3c
+  - i2s
+  - sdhc
+  - spi
+  - watchdog
+  - usb_device
+vendor: wavenumber

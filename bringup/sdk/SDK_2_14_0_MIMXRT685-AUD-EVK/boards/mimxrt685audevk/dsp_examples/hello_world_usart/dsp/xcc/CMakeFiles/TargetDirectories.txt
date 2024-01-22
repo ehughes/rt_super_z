@@ -1,0 +1,3 @@
+C:/ELI/SoftAcuity/elsa_dsp_firmware/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/dsp/xcc/CMakeFiles/dsp_hello_world_usart_hifi4.elf.dir
+C:/ELI/SoftAcuity/elsa_dsp_firmware/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/dsp/xcc/CMakeFiles/edit_cache.dir
+C:/ELI/SoftAcuity/elsa_dsp_firmware/sdk/SDK_2_14_0_MIMXRT685-AUD-EVK/boards/mimxrt685audevk/dsp_examples/hello_world_usart/dsp/xcc/CMakeFiles/rebuild_cache.dir

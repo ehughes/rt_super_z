@@ -1,0 +1,37 @@
+
+
+
+Breakpoint=C:/ELI/rt_super_z/rt_super_z/spi_flash/src/main.c:229:11, State=BP_STATE_DISABLED
+OpenDocument="cpu_idle.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cpu_idle.S", Line=130
+OpenDocument="main.c", FilePath="C:/ELI/rt_super_z/rt_super_z/spi_flash/src/main.c", Line=265
+OpenDocument="asm_inline_gcc.h", FilePath="C:/ELI/rt_super_z/zephyr/include/zephyr/arch/arm/aarch32/asm_inline_gcc.h", Line=77
+OpenDocument="sem.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/sem.c", Line=125
+OpenDocument="kernel.h", FilePath="C:/ELI/rt_super_z/rt_super_z/spi_flash/build/zephyr/include/generated/syscalls/kernel.h", Line=1090
+OpenDocument="spi_context.h", FilePath="C:/ELI/rt_super_z/zephyr/drivers/spi/spi_context.h", Line=89
+OpenDocument="spinlock.h", FilePath="C:/ELI/rt_super_z/zephyr/include/zephyr/spinlock.h", Line=249
+OpenDocument="spi.h", FilePath="C:/ELI/rt_super_z/zephyr/include/zephyr/drivers/spi.h", Line=727
+OpenDocument="spi.h", FilePath="C:/ELI/rt_super_z/rt_super_z/spi_flash/build/zephyr/include/generated/syscalls/spi.h", Line=14
+OpenDocument="spi_mcux_flexcomm.c", FilePath="C:/ELI/rt_super_z/zephyr/drivers/spi/spi_mcux_flexcomm.c", Line=697
+OpenDocument="device.h", FilePath="C:/ELI/rt_super_z/rt_super_z/spi_flash/build/zephyr/include/generated/syscalls/device.h", Line=9
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=2, w=119, h=245, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=119, h=245, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Global Data", DockArea=RIGHT, x=0, y=1, w=119, h=249, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=0, w=478, h=226, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=2, w=478, h=254, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory Usage", DockArea=LEFT, x=0, y=1, w=478, h=259, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=903, h=312, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=0, y=0, w=252, h=312, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Global Data", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Location";"Size";"Type";"Scope"], ColWidths=[100;100;100;100;100;100]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[199;287;224]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[225;286;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;358]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1351;100;100;100;584]
+WatchedExpression="rx_buffer", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="dev", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="test_page_in", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="test_page_out", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="rx_buffer", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1

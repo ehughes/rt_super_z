@@ -1,36 +1,28 @@
 
 
-OpenDocument="reset.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/reset.S", Line=0
 OpenDocument="OZONE.jdebug", FilePath="C:/ELI/rt_super_z/rt_super_z/hello_world/OZONE.jdebug", Line=0
 OpenDocument="fatal.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/fatal.c", Line=22
 OpenDocument="kswap.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/kswap.h", Line=182
-OpenDocument="exc.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/cortex_m/exc.h", Line=123
-OpenDocument="kernel_arch_func.h", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/include/aarch32/kernel_arch_func.h", Line=13
 OpenDocument="cmsis_gcc.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/cmsis_gcc.h", Line=1145
 OpenDocument="init.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/init.c", Line=305
 OpenDocument="core_cm33.h", FilePath="C:/ELI/rt_super_z/modules/hal/cmsis/CMSIS/Core/Include/core_cm33.h", Line=2569
-OpenDocument="irq_init.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c", Line=0
 OpenDocument="log_core.c", FilePath="C:/ELI/rt_super_z/zephyr/subsys/logging/log_core.c", Line=851
-OpenDocument="fault.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault.c", Line=1033
-OpenDocument="fault_s.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cortex_m/fault_s.S", Line=33
 OpenDocument="ksched.h", FilePath="C:/ELI/rt_super_z/zephyr/kernel/include/ksched.h", Line=147
-OpenDocument="cpu_idle.S", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/cpu_idle.S", Line=125
-OpenDocument="prep_c.c", FilePath="C:/ELI/rt_super_z/zephyr/arch/arm/core/aarch32/prep_c.c", Line=143
 OpenDocument="main.c", FilePath="C:/ELI/rt_super_z/rt_super_z/hello_world/src/main.c", Line=0
 OpenDocument="device.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/device.c", Line=54
 OpenDocument="uart_mcux_flexcomm.c", FilePath="C:/ELI/rt_super_z/zephyr/drivers/serial/uart_mcux_flexcomm.c", Line=45
 OpenDocument="banner.c", FilePath="C:/ELI/rt_super_z/zephyr/kernel/banner.c", Line=0
 OpenDocument="stdout_console.c", FilePath="C:/ELI/rt_super_z/zephyr/lib/libc/minimal/source/stdout/stdout_console.c", Line=0
 OpenToolbar="Debug", Floating=0, x=0, y=0
-OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=481, h=594, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=481, h=479, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=1, w=464, h=416, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
-OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=0, w=464, h=228, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Functions", DockArea=LEFT, x=0, y=2, w=464, h=412, TabPos=1, TopOfStack=1, FilterBarShown=1, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Memory Usage", DockArea=BOTTOM, x=0, y=0, w=1134, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=315, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=2, w=464, h=412, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
-OpenWindow="Console", DockArea=BOTTOM, x=2, y=0, w=315, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=1, w=481, h=592, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=481, h=481, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=1, w=464, h=413, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=0, w=464, h=234, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=2, w=464, h=409, TabPos=1, TopOfStack=1, FilterBarShown=1, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory Usage", DockArea=BOTTOM, x=0, y=0, w=1061, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=1, y=0, w=295, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=2, w=464, h=409, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Console", DockArea=BOTTOM, x=2, y=0, w=296, h=251, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
 SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
 TableHeader="Data Sampling Table", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
 TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[100;100;100;100;100;100;100;100;100]
@@ -40,5 +32,6 @@ TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols
 TableHeader="Power Sampling", SortCol="Index", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
 TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[412;199;389;100]
 TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
-TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[431;124;87;110;100]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[431;124;87;110;590]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;358]
 WatchedExpression="monkey_handler(const struct shell*", Window=Watched Data 1
