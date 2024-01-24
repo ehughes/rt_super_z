@@ -11,20 +11,7 @@
 #include "fsl_dmic.h"
 #include "fsl_dmic_dma.h"
 
-#define AUDIO_BLOCK_SIZE						48
-#define DOUBLE_BUFFER_CNT						2
-#define MIC_SAMPLE_SIZE_IN_BYTES                (4)
-#define MIC_FRAME_SIZE_SAMPLES                  (AUDIO_BLOCK_SIZE)
-#define MIC_BUFFER_SIZE_SAMPLES                 (MIC_FRAME_SIZE_SAMPLES * DOUBLE_BUFFER_CNT)
-#define MIC_CHANNEL_FRAME_SIZE_IN_BYTES         (AUDIO_BLOCK_SIZE * MIC_SAMPLE_SIZE_IN_BYTES)
-
-
-#define FIFO_DEPTH (15U)
-
-
-#define MIC_COUNT                               8
-int32_t MICBuffer[MIC_COUNT][MIC_BUFFER_SIZE_SAMPLES];
-
+#include "dmic_test.h"
 
 #define DMIC_DMA (DMA0)
 
@@ -254,9 +241,9 @@ static dmic_channel_config_t s_dmicChannelConfig = {
 #ifdef SAMPLE_RATE_16K
 	    .osr                 = 96U,
 #else
-	    .osr                 = 96U,
+	    .osr                 = 48,
 #endif
-	    .gainshft            = 6,
+	    .gainshft            = 0,
 	    .preac2coef          = kDMIC_CompValueZero,
 	    .preac4coef          = kDMIC_CompValueZero,
 	    .dc_cut_level        = kDMIC_DcCut155,
@@ -271,9 +258,10 @@ volatile uint32_t DMIC_Cnt =0 ;
 void DmicRxCallback(void *handle, void *userData, bool transferDone, uint32_t intmode)
 {
 	DMIC_Cnt++;
-
-
 }
+
+
+int32_t MICBuffer[MIC_COUNT][MIC_BUFFER_SIZE_SAMPLES];
 
 
 void DMIC__init(void)
@@ -286,11 +274,11 @@ void DMIC__init(void)
 
 
 
-    CLOCK_SetClkDiv(kCLOCK_DivDmicClk, 4U);         /* Set DMIC0FCLKDIV divider to value 4 */
+    CLOCK_SetClkDiv(kCLOCK_DivDmicClk, 2U);         /* Set DMIC0FCLKDIV divider to value 4 */
 
     DMIC_Init(DMIC0);
 
-    DMIC_Use2fs(DMIC0, true);
+    DMIC_Use2fs(DMIC0, false);
 
 	// Configure mic0 channel
 	DMA_EnableChannel(DMIC0_DMA, DMIC_DMA_RX_CHANNEL_0);

@@ -11,7 +11,7 @@
 #include "eGFX.h"
 #include "eGFX__7789.h"
 #include "assets/Sprites_16BPP_RGB565.h"
-
+#include  "math.h"
 #include "dmic_test.h"
 
 volatile uint32_t g_systickCounter;
@@ -42,6 +42,10 @@ int16_t plot_list_l[320];
 int16_t plot_list_r[320];
 
 uint32_t offset = 0;
+
+
+float hann[320];
+
 int main(void)
 {
 
@@ -75,17 +79,22 @@ int main(void)
 
    DMIC__init();
 
+   for(int i=0;i<320;i++)
+   {
+	   hann[i] = 0.5*(1-cos(2.0*3.14159*(float)i/320.0));
+   }
+
    while(1)
    {
-	   // memcpy(&eGFX_BackBuffer[0].Data,Sprite_16BPP_RGB565_bg2.Data,320*240*2);
+	    memcpy(&eGFX_BackBuffer[0].Data[0],Sprite_16BPP_RGB565_bg2.Data,320*240*2);
 
 
-	   i2s2__rx_capture(capture_buffer,320);
+	  // i2s2__rx_capture(capture_buffer,320);
 
-	   while(I2S2_Rx_Complete == false)
-	   {
+	  // while(I2S2_Rx_Complete == false)
+	  // {
 
-	   }
+	  // }
 
 	 //   memcpy(&eGFX_BackBuffer[0].Data,Sprite_16BPP_RGB565_bg1.Data,320*240*2);
 
@@ -94,7 +103,9 @@ int main(void)
 
 
 	    	//y = I2S2_Rx_Buffer[i*2+rx_buf_ptr];
-	    	y = capture_buffer[i*2];
+	    	//y = capture_buffer[i*2];
+	    	y = (int32_t)(MICBuffer[2][i] * hann[i]);
+
 	    	y=y/(32768/120) + 240/2;
 	    	plot_list_l[i] = y;
 
@@ -107,10 +118,11 @@ int main(void)
 	    for(int i=1;i<320;i++)
 	    {
 	    	eGFX_DrawLine(&eGFX_BackBuffer[0], plot_list_l[i-1],i-1,
-	    								    	plot_list_l[i] ,i, 0xFFFF);
+	    								    	plot_list_l[i] ,i, 0x03f<<5|0x1F);
 
-	    	eGFX_DrawLine(&eGFX_BackBuffer[0], plot_list_r[i-1],i-1,
-	    								    	plot_list_r[i] ,i, 0x1FF<<5+5);
+	       	eGFX_DrawLine(&eGFX_BackBuffer[0], plot_list_l[i-1]+1,i-1,
+	    	    								    	plot_list_l[i]+1 ,i, 0x03f<<5|0x1F);
+
 	    }
 
 	    eGFX_Dump(&eGFX_BackBuffer);
@@ -120,8 +132,6 @@ int main(void)
 	    	eGFX_DrawLine(&eGFX_BackBuffer[0], plot_list_l[i-1],i-1,
 	    								    	plot_list_l[i] ,i, 0);
 
-	    	eGFX_DrawLine(&eGFX_BackBuffer[0], plot_list_r[i-1],i-1,
-	    								    	plot_list_r[i] ,i, 0);
 	    }
 
 
