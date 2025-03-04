@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding= "UTF-8" ?>
-<configuration name="MIMXRT685S" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_14 http://mcuxpresso.nxp.com/XSD/mex_configuration_14.xsd" uuid="bc265dbf-44aa-4cbf-9244-c6a03f929c34" version="14" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<configuration name="MIMXRT685S" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_15 http://mcuxpresso.nxp.com/XSD/mex_configuration_15.xsd" uuid="bc265dbf-44aa-4cbf-9244-c6a03f929c34" version="15" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <common>
       <processor>MIMXRT685S</processor>
       <package>MIMXRT685SFVKB</package>
@@ -18,13 +18,13 @@
       <generate_registers_defines>false</generate_registers_defines>
    </preferences>
    <tools>
-      <pins name="Pins" version="14.0" enabled="true" update_project_code="true">
+      <pins name="Pins" version="15.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="board/pin_mux.c" update_enabled="true"/>
             <file path="board/pin_mux.h" update_enabled="true"/>
          </generated_project_files>
          <pins_profile>
-            <processor_version>14.0.0</processor_version>
+            <processor_version>15.0.1</processor_version>
             <pin_labels>
                <pin_label pin_num="A3" pin_signal="PIO0_14/FC2_SCK/SCT0_GPI0/SCT0_OUT0/CTIMER2_MAT0/I2S_BRIDGE_CLK_IN/SEC_PIO0_14" label="FC2_CLK" identifier="LED_GREEN;FC2_CLK"/>
                <pin_label pin_num="D6" pin_signal="PIO0_16/FC2_RXD_SDA_MOSI_DATA/SCT0_GPI2/SCT0_OUT2/CTIMER2_MAT2/I2S_BRIDGE_DATA_IN/SEC_PIO0_16" label="J36[8]/J47[7]/J48[15]/U109[64]/JS5[2]/FC2_SDA" identifier="FC2_SDA"/>
@@ -194,13 +194,13 @@
             </function>
          </functions_list>
       </pins>
-      <clocks name="Clocks" version="12.0" enabled="true" update_project_code="true">
+      <clocks name="Clocks" version="13.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="board/clock_config.c" update_enabled="true"/>
             <file path="board/clock_config.h" update_enabled="true"/>
          </generated_project_files>
          <clocks_profile>
-            <processor_version>14.0.0</processor_version>
+            <processor_version>15.0.1</processor_version>
          </clocks_profile>
          <clock_configurations>
             <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">

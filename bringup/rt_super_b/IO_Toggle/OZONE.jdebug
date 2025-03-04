@@ -4,9 +4,9 @@
 *                         www.segger.com                             *
 **********************************************************************
 
-File          : C:/ELI/rt_super_sw/SuperMonkeyGFX/OZONE.jdebug
-Created       : 11 Oct 2021 19:45
-Ozone Version : V3.24d
+File          : C:/ELI/projects/Wavenumber/rt_super_z/rt_super_z/bringup/rt_super_b/IO_Toggle/OZONE.jdebug
+Created       : 14 Feb 2025 13:44
+Ozone Version : V3.38c
 */
 
 /*********************************************************************
@@ -22,17 +22,18 @@ void OnProjectLoad (void) {
   //
   // Dialog-generated settings
   //
-  Project.AddPathSubstitute ("C:/ELI/rt_super_sw/SuperMonkeyGFX", "$(ProjectDir)");
-  Project.AddPathSubstitute ("c:/eli/rt_super_sw/supermonkeygfx", "$(ProjectDir)");
-  Project.SetDevice ("MIMXRT685SFAWBR");
+  Project.AddPathSubstitute ("C:/ELI/projects/Wavenumber/rt_super_z/rt_super_z/bringup/rt_super_b/IO_Toggle", "$(ProjectDir)");
+  Project.AddPathSubstitute ("c:/eli/projects/wavenumber/rt_super_z/rt_super_z/bringup/rt_super_b/io_toggle", "$(ProjectDir)");
+  Project.SetDevice ("MIMXRT685S");
   Project.SetHostIF ("USB", "");
   Project.SetTargetIF ("SWD");
   Project.SetTIFSpeed ("4 MHz");
   Project.AddSvdFile ("$(InstallDir)/Config/CPU/Cortex-M33F.svd");
+  Project.SetFlashLoader ("0x08000000 = Port_A; 0x18000000 = Port_A");
   //
   // User settings
   //
-  File.Open ("./Debug/mk76__blink.axf");
+  File.Open ("$(ProjectDir)/Debug/IO_Toggle.axf");
 }
 
 /*********************************************************************
@@ -113,6 +114,7 @@ void OnProjectLoad (void) {
 **********************************************************************
 */
 void AfterTargetReset (void) {
+  _SetupTarget();
 }
 
 /*********************************************************************
@@ -184,9 +186,8 @@ void AfterTargetReset (void) {
 *
 **********************************************************************
 */
-void BeforeTargetDownload (void) {
-//Target.EraseChip();
-}
+//void BeforeTargetDownload (void) {
+//}
 
 /*********************************************************************
 *
@@ -199,9 +200,7 @@ void BeforeTargetDownload (void) {
 **********************************************************************
 */
 void AfterTargetDownload (void) {
-
-Exec.Reset();
-
+  _SetupTarget();
 }
 
 /*********************************************************************
@@ -300,3 +299,47 @@ Exec.Reset();
 */
 //void OnError (void) {
 //}
+
+/*********************************************************************
+*
+*       AfterProjectLoad
+*
+* Function description
+*   After Project load routine. Optional.
+*
+**********************************************************************
+*/
+//void AfterProjectLoad (void) {
+//}
+
+/*********************************************************************
+*
+*       OnDebugStartBreakSymbolReached
+*
+* Function description
+*   Called when program execution has reached/passed
+*   the symbol to be breaked at during debug start. Optional.
+*
+**********************************************************************
+*/
+//void OnDebugStartBreakSymReached (void) {
+//}
+
+/*********************************************************************
+*
+*       _SetupTarget
+*
+* Function description
+*   Setup the target.
+*   Called by AfterTargetReset() and AfterTargetDownload().
+*
+*   Auto-generated function. May be overridden by Ozone.
+*
+**********************************************************************
+*/
+void _SetupTarget(void) {
+  //
+  // this function is intentionally empty because both inital PC and
+  // initial SP were chosen not to be set
+  //
+}

@@ -490,7 +490,7 @@ void i2s2__rx_capture(int16_t *buffer,uint32_t num_samples)
 
 	 dma_transfer_config_t I2S_Rx_TransferConfig;
 
-
+	 I2S2_Rx_Complete = false;
 
 	I2S_RxEnableDMA(I2S_TEST__RX, true);
 

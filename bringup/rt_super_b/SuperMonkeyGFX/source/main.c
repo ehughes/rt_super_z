@@ -11,8 +11,8 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-#define APP_BOARD_TEST_LED_PORT BOARD_LED_BLUE_GPIO_PORT
-#define APP_BOARD_TEST_LED_PIN  BOARD_LED_BLUE_GPIO_PIN
+#define APP_BOARD_TEST_LED_PORT 0
+#define APP_BOARD_TEST_LED_PIN  11
 #define APP_SW_PORT             BOARD_SW2_GPIO_PORT
 #define APP_SW_PIN              BOARD_SW2_GPIO_PIN
 
@@ -67,10 +67,11 @@ int main(void)
     BOARD_BootClockRUN();
 
     /* Init output LED GPIO. */
-    GPIO_PortInit(GPIO, APP_BOARD_TEST_LED_PORT);
+    GPIO_PortInit(GPIO, 0);
     GPIO_PortInit(GPIO, 1);
     GPIO_PortInit(GPIO, 2);
     GPIO_PinInit(GPIO, APP_BOARD_TEST_LED_PORT, APP_BOARD_TEST_LED_PIN, &led_config);
+    GPIO_PinInit(GPIO, 0, 5, &led_config);
     SystemCoreClockUpdate();
 
     SysTick_Config(SystemCoreClock / 1000U);
@@ -84,6 +85,7 @@ int main(void)
     {
 
     	GPIO_PortToggle(GPIO, APP_BOARD_TEST_LED_PORT, 1u << APP_BOARD_TEST_LED_PIN);
+    	GPIO_PortToggle(GPIO, 0, 1u << 5);
 
 
     	eGFX_Blit(&eGFX_BackBuffer[0],

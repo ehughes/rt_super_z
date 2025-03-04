@@ -91,10 +91,10 @@ int main(void)
 
 	  // i2s2__rx_capture(capture_buffer,320);
 
-	  // while(I2S2_Rx_Complete == false)
-	  // {
+	   //while(I2S2_Rx_Complete == false)
+	   //{
 
-	  // }
+	   //}
 
 	 //   memcpy(&eGFX_BackBuffer[0].Data,Sprite_16BPP_RGB565_bg1.Data,320*240*2);
 
@@ -109,9 +109,9 @@ int main(void)
 	    	y=y/(32768/120) + 240/2;
 	    	plot_list_l[i] = y;
 
-	    	y = capture_buffer[i*2+1];
-	    	y=y/(32768/120) + 240/2;
-	    	plot_list_r[i] = y;
+	    	//y = capture_buffer[i*2+1];
+	    	//y=y/(32768/120) + 240/2;
+	    //	plot_list_r[i] = y;
 
 	    }
 
@@ -125,7 +125,7 @@ int main(void)
 
 	    }
 
-	    eGFX_Dump(&eGFX_BackBuffer);
+	    eGFX_Dump(&eGFX_BackBuffer[0]);
 
 	    for(int i=1;i<320;i++)
 	    {

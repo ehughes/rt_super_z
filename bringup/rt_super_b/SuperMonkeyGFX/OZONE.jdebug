@@ -24,11 +24,15 @@ void OnProjectLoad (void) {
   //
   Project.AddPathSubstitute ("C:/ELI/rt_super_sw/SuperMonkeyGFX", "$(ProjectDir)");
   Project.AddPathSubstitute ("c:/eli/rt_super_sw/supermonkeygfx", "$(ProjectDir)");
-  Project.SetDevice ("MIMXRT685SFAWBR");
+ 
+  Project.SetDevice ("MIMXRT685S");
   Project.SetHostIF ("USB", "");
   Project.SetTargetIF ("SWD");
   Project.SetTIFSpeed ("4 MHz");
   Project.AddSvdFile ("$(InstallDir)/Config/CPU/Cortex-M33F.svd");
+  Project.AddSvdFile ("./MIMXRT685S_cm33.svd");
+  Project.SetFlashLoader ("0x08000000 = Port_A; 0x18000000 = Port_A");
+
   //
   // User settings
   //

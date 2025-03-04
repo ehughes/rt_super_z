@@ -27,10 +27,12 @@ void BOARD_InitBootPins(void);
 
 #define IOPCTL_PIO_ANAMUX_DI 0x00u        /*!<@brief Analog mux is disabled */
 #define IOPCTL_PIO_FULLDRIVE_DI 0x00u     /*!<@brief Normal drive */
+#define IOPCTL_PIO_FULLDRIVE_EN 0x0100u   /*!<@brief Full drive enable */
 #define IOPCTL_PIO_FUNC0 0x00u            /*!<@brief Selects pin function 0 */
 #define IOPCTL_PIO_FUNC1 0x01u            /*!<@brief Selects pin function 1 */
 #define IOPCTL_PIO_INBUF_DI 0x00u         /*!<@brief Disable input buffer function */
 #define IOPCTL_PIO_INV_DI 0x00u           /*!<@brief Input function is not inverted */
+#define IOPCTL_PIO_INV_EN 0x0800u         /*!<@brief Input function is inverted */
 #define IOPCTL_PIO_PSEDRAIN_DI 0x00u      /*!<@brief Pseudo Output Drain is disabled */
 #define IOPCTL_PIO_PULLDOWN_EN 0x00u      /*!<@brief Enable pull-down function */
 #define IOPCTL_PIO_PULLUP_EN 0x20u        /*!<@brief Enable pull-up function */
@@ -50,31 +52,49 @@ void BOARD_InitBootPins(void);
 /*!
  * @brief Signal channel */
 #define BOARD_INITPINS_PDM_CLK01_CHANNEL 0_1
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_CLK01_PORT 2U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_PDM_CLK01_PIN 16U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_PDM_CLK01_PIN_MASK (1U << 16U)
 /* @} */
 
 /*! @name PDM_CLK23 (coord U1), U19[D5]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_CLK23_PERIPHERAL DMIC0   /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_CLK23_SIGNAL CLK         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_CLK23_CHANNEL 2_3        /*!<@brief Signal channel */
-                                                    /* @} */
+#define BOARD_INITPINS_PDM_CLK23_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_CLK23_SIGNAL CLK                /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_CLK23_CHANNEL 2_3               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_CLK23_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_CLK23_PIN 17U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_CLK23_PIN_MASK (1U << 17U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
 
 /*! @name PDM_CLK45 (coord R2), U19[E3]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_CLK45_PERIPHERAL DMIC0   /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_CLK45_SIGNAL CLK         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_CLK45_CHANNEL 4_5        /*!<@brief Signal channel */
-                                                    /* @} */
+#define BOARD_INITPINS_PDM_CLK45_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_CLK45_SIGNAL CLK                /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_CLK45_CHANNEL 4_5               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_CLK45_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_CLK45_PIN 18U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_CLK45_PIN_MASK (1U << 18U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
 
 /*! @name PDM_CLK67 (coord T2), U19[C2]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_CLK67_PERIPHERAL DMIC0   /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_CLK67_SIGNAL CLK         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_CLK67_CHANNEL 6_7        /*!<@brief Signal channel */
-                                                    /* @} */
+#define BOARD_INITPINS_PDM_CLK67_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_CLK67_SIGNAL CLK                /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_CLK67_CHANNEL 6_7               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_CLK67_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_CLK67_PIN 19U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_CLK67_PIN_MASK (1U << 19U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
 
 /*! @name PDM_DATA01 (coord U2), U40[1]/U41[1]/PDM_DATA01_OnBoard
   @{ */
@@ -88,37 +108,58 @@ void BOARD_InitBootPins(void);
 /*!
  * @brief Signal channel */
 #define BOARD_INITPINS_PDM_DATA01_CHANNEL 0_1
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_DATA01_PORT 2U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_PDM_DATA01_PIN 20U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_PDM_DATA01_PIN_MASK (1U << 20U)
 /* @} */
 
 /*! @name PDM_DATA23 (coord R3), J31[6]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_DATA23_PERIPHERAL DMIC0    /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_DATA23_SIGNAL DATA         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_DATA23_CHANNEL 2_3         /*!<@brief Signal channel */
-                                                      /* @} */
+#define BOARD_INITPINS_PDM_DATA23_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_DATA23_SIGNAL DATA               /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_DATA23_CHANNEL 2_3               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_DATA23_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_DATA23_PIN 21U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_DATA23_PIN_MASK (1U << 21U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
 
 /*! @name PDM_DATA45 (coord P3), U19[E2]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_DATA45_PERIPHERAL DMIC0    /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_DATA45_SIGNAL DATA         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_DATA45_CHANNEL 4_5         /*!<@brief Signal channel */
-                                                      /* @} */
+#define BOARD_INITPINS_PDM_DATA45_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_DATA45_SIGNAL DATA               /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_DATA45_CHANNEL 4_5               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_DATA45_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_DATA45_PIN 22U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_DATA45_PIN_MASK (1U << 22U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
 
 /*! @name PDM_DATA67 (coord P5), U19[E1]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_PDM_DATA67_PERIPHERAL DMIC0    /*!<@brief Peripheral name */
-#define BOARD_INITPINS_PDM_DATA67_SIGNAL DATA         /*!<@brief Signal name */
-#define BOARD_INITPINS_PDM_DATA67_CHANNEL 6_7         /*!<@brief Signal channel */
-                                                      /* @} */
+#define BOARD_INITPINS_PDM_DATA67_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_PDM_DATA67_SIGNAL DATA               /*!<@brief Signal name */
+#define BOARD_INITPINS_PDM_DATA67_CHANNEL 6_7               /*!<@brief Signal channel */
+#define BOARD_INITPINS_PDM_DATA67_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_PDM_DATA67_PIN 23U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_PDM_DATA67_PIN_MASK (1U << 23U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
 
 /*! @name FC0_TXD_SCL_MISO_WS (coord G2), J16[1]/U27[3]/U9[12]
   @{ */
 /* Routed pin properties */
 #define BOARD_INITPINS_DEBUG_UART_TXD_PERIPHERAL FLEXCOMM0         /*!<@brief Peripheral name */
 #define BOARD_INITPINS_DEBUG_UART_TXD_SIGNAL TXD_SCL_MISO_WS       /*!<@brief Signal name */
+#define BOARD_INITPINS_DEBUG_UART_TXD_PORT 0U                      /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_DEBUG_UART_TXD_PIN 1U                       /*!<@brief PORT pin number */
+#define BOARD_INITPINS_DEBUG_UART_TXD_PIN_MASK (1U << 1U)          /*!<@brief PORT pin mask */
                                                                    /* @} */
 
 /*! @name FC0_RXD_SDA_MOSI_DATA (coord G4), JP21[2]/U28[3]/U9[13]
@@ -126,20 +167,29 @@ void BOARD_InitBootPins(void);
 /* Routed pin properties */
 #define BOARD_INITPINS_DEBUG_UART_RXD_PERIPHERAL FLEXCOMM0           /*!<@brief Peripheral name */
 #define BOARD_INITPINS_DEBUG_UART_RXD_SIGNAL RXD_SDA_MOSI_DATA       /*!<@brief Signal name */
+#define BOARD_INITPINS_DEBUG_UART_RXD_PORT 0U                        /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_DEBUG_UART_RXD_PIN 2U                         /*!<@brief PORT pin number */
+#define BOARD_INITPINS_DEBUG_UART_RXD_PIN_MASK (1U << 2U)            /*!<@brief PORT pin mask */
                                                                      /* @} */
 
 /*! @name I3C0_PUR (coord B6), J18[3]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_I3C0_PUR_PERIPHERAL I3C    /*!<@brief Peripheral name */
-#define BOARD_INITPINS_I3C0_PUR_SIGNAL PUR        /*!<@brief Signal name */
-                                                  /* @} */
+#define BOARD_INITPINS_I3C0_PUR_PERIPHERAL I3C            /*!<@brief Peripheral name */
+#define BOARD_INITPINS_I3C0_PUR_SIGNAL PUR                /*!<@brief Signal name */
+#define BOARD_INITPINS_I3C0_PUR_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_I3C0_PUR_PIN 31U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_I3C0_PUR_PIN_MASK (1U << 31U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
 
 /*! @name I3C0_SCL (coord N17), J18[1]/U8[2]/U17[A6]/SCL_CODEC
   @{ */
 /* Routed pin properties */
 #define BOARD_INITPINS_I3C0_SCL_PERIPHERAL I3C                         /*!<@brief Peripheral name */
 #define BOARD_INITPINS_I3C0_SCL_SIGNAL SCL                             /*!<@brief Signal name */
+#define BOARD_INITPINS_I3C0_SCL_PORT 2U                                /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_I3C0_SCL_PIN 29U                                /*!<@brief PORT pin number */
+#define BOARD_INITPINS_I3C0_SCL_PIN_MASK (1U << 29U)                   /*!<@brief PORT pin mask */
                                                                        /* @} */
 
 /*! @name I3C0_SDA (coord P16), J18[2]/U8[3]/U17[B6]/SDA_CODEC
@@ -147,41 +197,59 @@ void BOARD_InitBootPins(void);
 /* Routed pin properties */
 #define BOARD_INITPINS_I3C0_SDA_PERIPHERAL I3C                         /*!<@brief Peripheral name */
 #define BOARD_INITPINS_I3C0_SDA_SIGNAL SDA                             /*!<@brief Signal name */
+#define BOARD_INITPINS_I3C0_SDA_PORT 2U                                /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_I3C0_SDA_PIN 30U                                /*!<@brief PORT pin number */
+#define BOARD_INITPINS_I3C0_SDA_PIN_MASK (1U << 30U)                   /*!<@brief PORT pin mask */
                                                                        /* @} */
 
 /*! @name FC2_SCK (coord A3), Q4[5]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_LED_GREEN_PERIPHERAL FLEXCOMM2 /*!<@brief Peripheral name */
-#define BOARD_INITPINS_LED_GREEN_SIGNAL SCK           /*!<@brief Signal name */
-                                                      /* @} */
+#define BOARD_INITPINS_LED_GREEN_PERIPHERAL FLEXCOMM2      /*!<@brief Peripheral name */
+#define BOARD_INITPINS_LED_GREEN_SIGNAL SCK                /*!<@brief Signal name */
+#define BOARD_INITPINS_LED_GREEN_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LED_GREEN_PIN 14U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LED_GREEN_PIN_MASK (1U << 14U)      /*!<@brief PORT pin mask */
+                                                           /* @} */
 
 /*! @name HS_SPI_MISO (coord M2), U19[D2]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_LCD_MISO_PERIPHERAL FLEXCOMM14 /*!<@brief Peripheral name */
-#define BOARD_INITPINS_LCD_MISO_SIGNAL MISO           /*!<@brief Signal name */
-                                                      /* @} */
+#define BOARD_INITPINS_LCD_MISO_PERIPHERAL FLEXCOMM14     /*!<@brief Peripheral name */
+#define BOARD_INITPINS_LCD_MISO_SIGNAL MISO               /*!<@brief Signal name */
+#define BOARD_INITPINS_LCD_MISO_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCD_MISO_PIN 12U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCD_MISO_PIN_MASK (1U << 12U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
 
 /*! @name HS_SPI_MOSI (coord N1), U19[C4]
   @{ */
 /* Routed pin properties */
 #define BOARD_INITPINS_LCD_MOSI_PERIPHERAL FLEXCOMM14              /*!<@brief Peripheral name */
 #define BOARD_INITPINS_LCD_MOSI_SIGNAL MOSI                        /*!<@brief Signal name */
+#define BOARD_INITPINS_LCD_MOSI_PORT 1U                            /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCD_MOSI_PIN 13U                            /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCD_MOSI_PIN_MASK (1U << 13U)               /*!<@brief PORT pin mask */
                                                                    /* @} */
 
 /*! @name HS_SPI_SCK (coord L2), U19[D3]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_LCD_SCK_PERIPHERAL FLEXCOMM14 /*!<@brief Peripheral name */
-#define BOARD_INITPINS_LCD_SCK_SIGNAL SCK            /*!<@brief Signal name */
-                                                     /* @} */
+#define BOARD_INITPINS_LCD_SCK_PERIPHERAL FLEXCOMM14     /*!<@brief Peripheral name */
+#define BOARD_INITPINS_LCD_SCK_SIGNAL SCK                /*!<@brief Signal name */
+#define BOARD_INITPINS_LCD_SCK_PORT 1U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_LCD_SCK_PIN 11U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_LCD_SCK_PIN_MASK (1U << 11U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
 
 /*! @name FC5_RXD_SDA_MOSI_DATA (coord J16), J28[4]/JP30[1]/J45[22]
   @{ */
 /* Routed pin properties */
 #define BOARD_INITPINS_ACC_INT_PERIPHERAL FLEXCOMM5           /*!<@brief Peripheral name */
 #define BOARD_INITPINS_ACC_INT_SIGNAL RXD_SDA_MOSI_DATA       /*!<@brief Signal name */
+#define BOARD_INITPINS_ACC_INT_PORT 1U                        /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_ACC_INT_PIN 5U                         /*!<@brief PORT pin number */
+#define BOARD_INITPINS_ACC_INT_PIN_MASK (1U << 5U)            /*!<@brief PORT pin mask */
                                                               /* @} */
 
 /*! @name PIO2_5 (coord U13), LCD_CMD_DATA
