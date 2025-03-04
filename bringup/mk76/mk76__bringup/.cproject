@@ -710,9 +710,9 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="com.nxp.mcuxpresso.core.datamodels">
-		<sdkName>SDK_2.x_MIMXRT685-AUD-EVK</sdkName>
+		<sdkName>SDK_2.x_EVK-MIMXRT685</sdkName>
 		<sdkExample>mimxrt685audevk_i2s_dma_tdm_record_playback</sdkExample>
-		<sdkVersion>2.13.0</sdkVersion>
+		<sdkVersion>2.9.0</sdkVersion>
 		<sdkComponents>component.flexcomm_i2c_adapter.MIMXRT685S;component.codec_i2c.MIMXRT685S;utility.debug_console_lite.MIMXRT685S;platform.utilities.assert_lite.MIMXRT685S;driver.cs42448.MIMXRT685S;component.cs42448_adapter.MIMXRT685S;driver.codec.MIMXRT685S;platform.drivers.flexcomm_i2c.MIMXRT685S;platform.drivers.flexcomm_i2s.MIMXRT685S;platform.drivers.flexcomm_i2s_dma.MIMXRT685S;platform.drivers.lpc_dma.MIMXRT685S;platform.drivers.flexcomm_usart.MIMXRT685S;platform.drivers.common.MIMXRT685S;platform.drivers.clock.MIMXRT685S;platform.drivers.power.MIMXRT685S;platform.drivers.lpc_gpio.MIMXRT685S;platform.drivers.inputmux.MIMXRT685S;device.MIMXRT685S_CMSIS.MIMXRT685S;component.usart_adapter.MIMXRT685S;platform.drivers.flash_config.mimxrt685audevk.MIMXRT685S;platform.drivers.flexspi.MIMXRT685S;platform.drivers.cache_cache64.MIMXRT685S;component.lists.MIMXRT685S;device.MIMXRT685S_startup.MIMXRT685S;platform.drivers.flexcomm.MIMXRT685S;platform.drivers.lpc_iopctl.MIMXRT685S;platform.drivers.reset.MIMXRT685S;platform.utilities.misc_utilities.MIMXRT685S;platform.drivers.inputmux_connections.MIMXRT685S;CMSIS_Include_core_cm.MIMXRT685S;mimxrt685audevk_i2s_dma_tdm_record_playback;middleware.baremetal.MIMXRT685S;platform.drivers.flexcomm_spi.MIMXRT685S;platform.drivers.dmic.MIMXRT685S;platform.drivers.dmic_dma.MIMXRT685S;</sdkComponents>
 		<boardId>mimxrt685audevk</boardId>
 		<package>MIMXRT685SFVKB</package>

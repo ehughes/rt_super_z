@@ -45,21 +45,6 @@
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/pin_cfg/B/board/pin_mux.h</locationURI>
 		</link>
-		<link>
-			<name>source/Assets</name>
-			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Common/Assets</locationURI>
-		</link>
-		<link>
-			<name>source/eGFX</name>
-			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Common/eGFX</locationURI>
-		</link>
-		<link>
-			<name>source/eGFX_Config</name>
-			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Common/eGFX_Config</locationURI>
-		</link>
 	</linkedResources>
 	<variableList>
 		<variable>

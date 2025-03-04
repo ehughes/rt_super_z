@@ -78,7 +78,7 @@ int main(void)
 
     SysTick_DelayTicks(1000);
     eGFX_InitDriver();
-    Next = (eGFX_ImagePlane *)&Sprite_16BPP_RGB565_sa;
+    Next = (eGFX_ImagePlane *)&Sprite_16BPP_RGB565_pdm_monkey;
 
 
     while (1)

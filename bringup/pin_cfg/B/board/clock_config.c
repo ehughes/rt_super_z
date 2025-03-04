@@ -15,11 +15,11 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Clocks v11.0
+product: Clocks v14.0
 processor: MIMXRT685S
 package_id: MIMXRT685SFVKB
 mcu_data: ksdk2_0
-processor_version: 13.0.1
+processor_version: 16.3.0
 board: MIMXRT685-EVK
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -87,21 +87,17 @@ called_from_default_init: true
 outputs:
 - {id: FLEXSPI_clock.outFreq, value: 105.6 MHz}
 - {id: LPOSC1M_clock.outFreq, value: 1 MHz}
-- {id: MCLK_clock.outFreq, value: 2715.84/221 MHz}
 - {id: OSTIMER_clock.outFreq, value: 1 MHz}
 - {id: System_clock.outFreq, value: 264 MHz}
 - {id: WAKE_32K_clock.outFreq, value: 31.25 kHz}
 settings:
 - {id: AUDIOPLL0_PFD0_CLK_GATE, value: Enabled}
-- {id: MCLK_PIN_Mode, value: OutputMode}
-- {id: MCLK_PIN_Mode1, value: OutputMode}
 - {id: PLL0_PFD0_CLK_GATE, value: Enabled}
 - {id: PLL0_PFD2_CLK_GATE, value: 'No'}
-- {id: SYSCON.AUDIOMCLKSEL.sel, value: SYSCON.AUDIOPLLCLKDIV}
 - {id: SYSCON.AUDIOPLL0CLKSEL.sel, value: SYSCON.SYSOSCBYPASS}
-- {id: SYSCON.AUDIOPLL0_PFD0_DIV.scale, value: '12'}
-- {id: SYSCON.AUDIOPLLCLKDIV.scale, value: '65', locked: true}
-- {id: SYSCON.CT32BIT0FCLKSEL.sel, value: SYSCON.mclk_in}
+- {id: SYSCON.AUDIOPLL0_PFD0_DIV.scale, value: '26', locked: true}
+- {id: SYSCON.AUDIOPLLCLKDIV.scale, value: '30', locked: true}
+- {id: SYSCON.AUDIO_PLL0_PFD0_MUL.scale, value: '18', locked: true}
 - {id: SYSCON.FLEXSPIFCLKDIV.scale, value: '5', locked: true}
 - {id: SYSCON.FLEXSPIFCLKSEL.sel, value: SYSCON.MAINPLLCLKDIV}
 - {id: SYSCON.FRGPLLCLKDIV.scale, value: '12', locked: true}
@@ -114,9 +110,9 @@ settings:
 - {id: SYSCON.PLL0_PFD0_MUL.scale, value: '18', locked: true}
 - {id: SYSCON.PLL0_PFD2_DIV.scale, value: '24', locked: true}
 - {id: SYSCON.PLL0_PFD2_MUL.scale, value: '18', locked: true}
-- {id: SYSCON.PLL1.denom, value: '255', locked: true}
+- {id: SYSCON.PLL1.denom, value: '27000', locked: true}
 - {id: SYSCON.PLL1.div, value: '22'}
-- {id: SYSCON.PLL1.num, value: '48', locked: true}
+- {id: SYSCON.PLL1.num, value: '5040', locked: true}
 - {id: SYSCON.SYSCPUAHBCLKDIV.scale, value: '2'}
 - {id: SYSCON.SYSPLL0CLKSEL.sel, value: SYSCON.SYSOSCBYPASS}
 - {id: SYSCTL_PDRUNCFG_AUDIOPLL_CFG, value: 'No'}
@@ -125,7 +121,6 @@ settings:
 - {id: XTAL_LP_Enable, value: LowPowerMode}
 sources:
 - {id: SYSCON.XTAL.outFreq, value: 24 MHz, enabled: true}
-- {id: SYSCON.mclk_in.outFreq, value: 12.288 MHz}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -142,8 +137,8 @@ const clock_sys_pll_config_t g_sysPllConfig_BOARD_BootClockRUN =
 const clock_audio_pll_config_t g_audioPllConfig_BOARD_BootClockRUN =
     {
         .audio_pll_src = kCLOCK_AudioPllXtalIn,   /* OSC clock */
-        .numerator = 48,                          /* Numerator of the Audio PLL fractional loop divider is null */
-        .denominator = 255,                       /* Denominator of the Audio PLL fractional loop divider is null */
+        .numerator = 5040,                        /* Numerator of the Audio PLL fractional loop divider is null */
+        .denominator = 27000,                     /* Denominator of the Audio PLL fractional loop divider is null */
         .audio_pll_mult = kCLOCK_AudioPllMult22   /* Divide by 22 */
     };
 /*******************************************************************************
@@ -173,25 +168,21 @@ void BOARD_BootClockRUN(void)
     CLOCK_EnableSysOscClk(true, true, BOARD_SYSOSC_SETTLING_US); /* Enable system OSC */
     CLOCK_SetXtalFreq(BOARD_XTAL_SYS_CLK_HZ);              /* Sets external XTAL OSC freq */
 
-   // SYSCTL1 |= SYSCTL1_MCLKPINDIR_MCLKPINDIR_MASK          /* Set MCLK Pin as output */
-    SYSCTL1->MCLKPINDIR = SYSCTL1_MCLKPINDIR_MCLKPINDIR_MASK;
     /* Configure SysPLL0 clock source */
     CLOCK_InitSysPll(&g_sysPllConfig_BOARD_BootClockRUN);
     CLOCK_InitSysPfd(kCLOCK_Pfd0, 18);                /* Enable MAIN PLL clock */
 
     /* Configure Audio PLL clock source */
     CLOCK_InitAudioPll(&g_audioPllConfig_BOARD_BootClockRUN);
-    CLOCK_InitAudioPfd(kCLOCK_Pfd0, 12);              /* Enable Audio PLL clock */
+    CLOCK_InitAudioPfd(kCLOCK_Pfd0, 26);              /* Enable Audio PLL clock */
 
     CLOCK_SetClkDiv(kCLOCK_DivSysCpuAhbClk, 2U);         /* Set SYSCPUAHBCLKDIV divider to value 2 */
 
     /* Set up clock selectors - Attach clocks to the peripheries */
     CLOCK_AttachClk(kMAIN_PLL_to_MAIN_CLK);                 /* Switch MAIN_CLK to MAIN_PLL */
-    CLOCK_AttachClk(kAUDIO_PLL_to_MCLK_CLK);                 /* Switch MCLK_CLK to AUDIO_PLL */
 
     /* Set up dividers */
-    CLOCK_SetClkDiv(kCLOCK_DivAudioPllClk, 65U);         /* Set AUDIOPLLCLKDIV divider to value 65 */
-    CLOCK_SetClkDiv(kCLOCK_DivMclkClk, 1U);         /* Set AUDIOMCLKDIV divider to value 1 */
+    CLOCK_SetClkDiv(kCLOCK_DivAudioPllClk, 30U);         /* Set AUDIOPLLCLKDIV divider to value 30 */
     CLOCK_SetClkDiv(kCLOCK_DivPllFrgClk, 12U);         /* Set FRGPLLCLKDIV divider to value 12 */
 
     /* Call weak function BOARD_SetFlexspiClock() to set user configured clock source/divider for FLEXSPI. */
