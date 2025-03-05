@@ -65,10 +65,10 @@ BOARD_InitPins:
     pupdsel: pullDown, ibena: disabled, slew_rate: normal, drive: normal, amena: disabled, odena: disabled, iiena: disabled}
   - {pin_num: L16, peripheral: SWD, signal: SWO, pin_signal: PIO2_24/SWO/GPIO_INT_BMAT, pupdena: enabled, pupdsel: pullUp, ibena: disabled, slew_rate: normal, drive: normal,
     amena: disabled, odena: disabled, iiena: disabled}
-  - {pin_num: R1, peripheral: DMIC0, signal: 'CLK, 0_1', pin_signal: PIO2_16/PDM_CLK01}
-  - {pin_num: U1, peripheral: DMIC0, signal: 'CLK, 2_3', pin_signal: PIO2_17/PDM_CLK23/FLEXSPI0B_DATA4}
-  - {pin_num: R2, peripheral: DMIC0, signal: 'CLK, 4_5', pin_signal: PIO2_18/PDM_CLK45/FLEXSPI0B_DATA5}
-  - {pin_num: T2, peripheral: DMIC0, signal: 'CLK, 6_7', pin_signal: PIO2_19/PDM_CLK67/FLEXSPI0B_SS0_N, identifier: PDM_CLK67}
+  - {pin_num: R1, peripheral: DMIC0, signal: 'CLK, 0_1', pin_signal: PIO2_16/PDM_CLK01, ibena: enabled}
+  - {pin_num: U1, peripheral: DMIC0, signal: 'CLK, 2_3', pin_signal: PIO2_17/PDM_CLK23/FLEXSPI0B_DATA4, ibena: enabled}
+  - {pin_num: R2, peripheral: DMIC0, signal: 'CLK, 4_5', pin_signal: PIO2_18/PDM_CLK45/FLEXSPI0B_DATA5, ibena: enabled}
+  - {pin_num: T2, peripheral: DMIC0, signal: 'CLK, 6_7', pin_signal: PIO2_19/PDM_CLK67/FLEXSPI0B_SS0_N, identifier: PDM_CLK67, ibena: enabled}
   - {pin_num: U2, peripheral: DMIC0, signal: 'DATA, 0_1', pin_signal: PIO2_20/PDM_DATA01, ibena: enabled}
   - {pin_num: R3, peripheral: DMIC0, signal: 'DATA, 2_3', pin_signal: PIO2_21/PDM_DATA23/CTIMER_INP14/FLEXSPI0B_SS1_N, ibena: enabled}
   - {pin_num: P3, peripheral: DMIC0, signal: 'DATA, 4_5', pin_signal: PIO2_22/PDM_DATA45/FLEXSPI0B_DATA6, ibena: enabled}
@@ -612,8 +612,8 @@ void BOARD_InitPins(void)
                                 IOPCTL_PIO_PUPD_DI |
                                 /* Enable pull-down function */
                                 IOPCTL_PIO_PULLDOWN_EN |
-                                /* Disable input buffer function */
-                                IOPCTL_PIO_INBUF_DI |
+                                /* Enables input buffer function */
+                                IOPCTL_PIO_INBUF_EN |
                                 /* Normal mode */
                                 IOPCTL_PIO_SLEW_RATE_NORMAL |
                                 /* Normal drive */
@@ -633,8 +633,8 @@ void BOARD_InitPins(void)
                                 IOPCTL_PIO_PUPD_DI |
                                 /* Enable pull-down function */
                                 IOPCTL_PIO_PULLDOWN_EN |
-                                /* Disable input buffer function */
-                                IOPCTL_PIO_INBUF_DI |
+                                /* Enables input buffer function */
+                                IOPCTL_PIO_INBUF_EN |
                                 /* Normal mode */
                                 IOPCTL_PIO_SLEW_RATE_NORMAL |
                                 /* Normal drive */
@@ -654,8 +654,8 @@ void BOARD_InitPins(void)
                                 IOPCTL_PIO_PUPD_DI |
                                 /* Enable pull-down function */
                                 IOPCTL_PIO_PULLDOWN_EN |
-                                /* Disable input buffer function */
-                                IOPCTL_PIO_INBUF_DI |
+                                /* Enables input buffer function */
+                                IOPCTL_PIO_INBUF_EN |
                                 /* Normal mode */
                                 IOPCTL_PIO_SLEW_RATE_NORMAL |
                                 /* Normal drive */
@@ -675,8 +675,8 @@ void BOARD_InitPins(void)
                                 IOPCTL_PIO_PUPD_DI |
                                 /* Enable pull-down function */
                                 IOPCTL_PIO_PULLDOWN_EN |
-                                /* Disable input buffer function */
-                                IOPCTL_PIO_INBUF_DI |
+                                /* Enables input buffer function */
+                                IOPCTL_PIO_INBUF_EN |
                                 /* Normal mode */
                                 IOPCTL_PIO_SLEW_RATE_NORMAL |
                                 /* Normal drive */

@@ -33,7 +33,7 @@ void OnProjectLoad (void) {
   //
   // User settings
   //
-  File.Open ("$(ProjectDir)/Debug/mimxrt685audevk_monkey_pdm.axf");
+  File.Open ("./Debug/mimxrt685audevk_monkey_pdm.axf");
 }
 
 /*********************************************************************
