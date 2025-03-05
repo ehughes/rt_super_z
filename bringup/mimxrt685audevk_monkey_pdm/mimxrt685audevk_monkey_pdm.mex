@@ -116,10 +116,26 @@
                         <pin_feature name="identifier" value="PDM_CLK67"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="DMIC0" signal="DATA, 0_1" pin_num="U2" pin_signal="PIO2_20/PDM_DATA01"/>
-                  <pin peripheral="DMIC0" signal="DATA, 2_3" pin_num="R3" pin_signal="PIO2_21/PDM_DATA23/CTIMER_INP14/FLEXSPI0B_SS1_N"/>
-                  <pin peripheral="DMIC0" signal="DATA, 4_5" pin_num="P3" pin_signal="PIO2_22/PDM_DATA45/FLEXSPI0B_DATA6"/>
-                  <pin peripheral="DMIC0" signal="DATA, 6_7" pin_num="P5" pin_signal="PIO2_23/PDM_DATA67/FLEXSPI0B_DATA7"/>
+                  <pin peripheral="DMIC0" signal="DATA, 0_1" pin_num="U2" pin_signal="PIO2_20/PDM_DATA01">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="DMIC0" signal="DATA, 2_3" pin_num="R3" pin_signal="PIO2_21/PDM_DATA23/CTIMER_INP14/FLEXSPI0B_SS1_N">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="DMIC0" signal="DATA, 4_5" pin_num="P3" pin_signal="PIO2_22/PDM_DATA45/FLEXSPI0B_DATA6">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="DMIC0" signal="DATA, 6_7" pin_num="P5" pin_signal="PIO2_23/PDM_DATA67/FLEXSPI0B_DATA7">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
                   <pin peripheral="I3C" signal="PUR" pin_num="B6" pin_signal="PIO2_31/I3C0_PUR/SCT0_OUT7/UTICK_CAP3/CTIMER_INP15/SWO/CMP0_B"/>
                   <pin peripheral="I3C" signal="SCL" pin_num="N17" pin_signal="PIO2_29/I3C0_SCL/SCT0_OUT0/CLKOUT">
                      <pin_features>
