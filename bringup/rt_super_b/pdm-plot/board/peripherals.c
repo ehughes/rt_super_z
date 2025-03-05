@@ -10,7 +10,7 @@ product: Peripherals v15.0
 processor: MIMXRT685S
 package_id: MIMXRT685SFVKB
 mcu_data: ksdk2_0
-processor_version: 16.3.0
+processor_version: 24.12.10
 board: MIMXRT685-EVK
 functionalGroups:
 - name: BOARD_InitPeripherals

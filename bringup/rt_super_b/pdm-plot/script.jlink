@@ -1,0 +1,7 @@
+ExitOnError 1
+r
+h
+loadfile "C:\work\wavenumber\super_monkey\src\rt_super_z\bringup\rt_super_b\pdm-plot\Debug\pdm-plot.hex"
+qc
+
+qc

@@ -1,0 +1,10 @@
+{
+    "FontElementWidth":5, 
+    "FontElementHeight":7, 
+    "StartingASCII_Character":33,
+	"Rows":3,
+	"CharactersPerRow":32,
+	"PixelsBetweenElements":1,
+	"UseASCII_Naming":"true",
+    "FontImage":"HWC1_5x7_Font.png"
+}

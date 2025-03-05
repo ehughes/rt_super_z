@@ -1,0 +1,7 @@
+ExitOnError 1
+r
+h
+loadfile "C:\Users\Jerry\Documents\MCUXpressoIDE_24.12.148\workspace\mimxrt685audevk_hello_world\Debug\mimxrt685audevk_hello_world.hex"
+qc
+
+qc
