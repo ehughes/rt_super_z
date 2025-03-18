@@ -14,7 +14,7 @@ for attr in dir(imgui):
         print(attr)
         
 class SerialMonitor:
-    def __init__(self, port='COM5', baudrate=115200):
+    def __init__(self, port='COM6', baudrate=115200):
         self.serial = serial.Serial(port=port, baudrate=baudrate)
         self.queue = queue.Queue()
         self.running = True
@@ -85,7 +85,7 @@ def main():
 
     # Initialize serial monitor
     try:
-        serial_monitor = SerialMonitor('COM5')  # Replace with your port
+        serial_monitor = SerialMonitor('COM6')  # Replace with your port
     except Exception as e:
         print(f"Error opening serial port: {e}")
         serial_monitor = None

@@ -46,6 +46,9 @@ uint32_t offset = 0;
 
 float hann[320];
 
+
+
+
 int main(void)
 {
 
@@ -68,6 +71,8 @@ int main(void)
    GPIO_PinInit(GPIO, BOARD_INITPINS_RED_LED_PORT, BOARD_INITPINS_RED_LED_PIN, &IO_OutputConfig);
 
    GPIO_PinInit(GPIO, BOARD_INITPINS_GREEN_LED_PORT, BOARD_INITPINS_GREEN_LED_PIN, &IO_OutputConfig);
+   GPIO_PinInit(GPIO, 2, 10, &IO_OutputConfig);
+
 
    SystemCoreClockUpdate();
 
@@ -137,6 +142,7 @@ int main(void)
 
         GPIO_PortToggle(GPIO, BOARD_INITPINS_RED_LED_PORT, 1u << BOARD_INITPINS_RED_LED_PIN);
         GPIO_PortToggle(GPIO, BOARD_INITPINS_GREEN_LED_PORT, 1u << BOARD_INITPINS_GREEN_LED_PIN);
+
    }
 }
 

@@ -50,14 +50,26 @@ void BOARD_InitBootPins(void);
 /*!
  * @brief Signal name */
 #define BOARD_INITPINS_FC2_SDA_SIGNAL RXD_SDA_MOSI_DATA
+/*!
+ * @brief PORT peripheral base pointer */
+#define BOARD_INITPINS_FC2_SDA_PORT 0U
+/*!
+ * @brief PORT pin number */
+#define BOARD_INITPINS_FC2_SDA_PIN 16U
+/*!
+ * @brief PORT pin mask */
+#define BOARD_INITPINS_FC2_SDA_PIN_MASK (1U << 16U)
 /* @} */
 
 /*! @name FC2_SCK (coord A3), FC2_CLK
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_FC2_CLK_PERIPHERAL FLEXCOMM2 /*!<@brief Peripheral name */
-#define BOARD_INITPINS_FC2_CLK_SIGNAL SCK           /*!<@brief Signal name */
-                                                    /* @} */
+#define BOARD_INITPINS_FC2_CLK_PERIPHERAL FLEXCOMM2      /*!<@brief Peripheral name */
+#define BOARD_INITPINS_FC2_CLK_SIGNAL SCK                /*!<@brief Signal name */
+#define BOARD_INITPINS_FC2_CLK_PORT 0U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_FC2_CLK_PIN 14U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_FC2_CLK_PIN_MASK (1U << 14U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
 
 /*! @name PIO0_19 (coord A1), GREEN_LED
   @{ */
@@ -92,10 +104,28 @@ void BOARD_InitBootPins(void);
 /*! @name PDM_CLK67 (coord T2), JP35[2]
   @{ */
 /* Routed pin properties */
-#define BOARD_INITPINS_QSPI_B_CS0_PERIPHERAL DMIC0   /*!<@brief Peripheral name */
-#define BOARD_INITPINS_QSPI_B_CS0_SIGNAL CLK         /*!<@brief Signal name */
-#define BOARD_INITPINS_QSPI_B_CS0_CHANNEL 6_7        /*!<@brief Signal channel */
-                                                     /* @} */
+#define BOARD_INITPINS_QSPI_B_CS0_PERIPHERAL DMIC0          /*!<@brief Peripheral name */
+#define BOARD_INITPINS_QSPI_B_CS0_SIGNAL CLK                /*!<@brief Signal name */
+#define BOARD_INITPINS_QSPI_B_CS0_CHANNEL 6_7               /*!<@brief Signal channel */
+#define BOARD_INITPINS_QSPI_B_CS0_PORT 2U                   /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_QSPI_B_CS0_PIN 19U                   /*!<@brief PORT pin number */
+#define BOARD_INITPINS_QSPI_B_CS0_PIN_MASK (1U << 19U)      /*!<@brief PORT pin mask */
+                                                            /* @} */
+
+/*! @name PIO2_10 (coord T15), SD_RST_N
+  @{ */
+/* Routed pin properties */
+#define BOARD_INITPINS_SD_RST_N_PERIPHERAL GPIO                    /*!<@brief Peripheral name */
+#define BOARD_INITPINS_SD_RST_N_SIGNAL PIO2                        /*!<@brief Signal name */
+#define BOARD_INITPINS_SD_RST_N_CHANNEL 10                         /*!<@brief Signal channel */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITPINS_SD_RST_N_GPIO GPIO                          /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITPINS_SD_RST_N_GPIO_PIN_MASK (1U << 10U)          /*!<@brief GPIO pin mask */
+#define BOARD_INITPINS_SD_RST_N_PORT 2U                            /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITPINS_SD_RST_N_PIN 10U                            /*!<@brief PORT pin number */
+#define BOARD_INITPINS_SD_RST_N_PIN_MASK (1U << 10U)               /*!<@brief PORT pin mask */
+                                                                   /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.

@@ -20,11 +20,22 @@ extern eGFX_ImagePlane eGFX_BackBuffer[eGFX_NUM_BACKBUFFERS];
 #define CS_HIGH   		GPIO->SET[1] = 1<<6;
 #define CS_LOW 			GPIO->CLR[1] = 1<<6;
 
-#define RESET_HIGH		   GPIO->SET[1] = 1<<9
-#define RESET_LOW		    GPIO->CLR[1] = 1<<9
+#define RESET_HIGH		   GPIO->SET[0] = 1<<26
+#define RESET_LOW		    GPIO->CLR[0] = 1<<26
 
-#define CMD_DATA_HIGH		GPIO->SET[0] = 1<<26;
-#define CMD_DATA_LOW		GPIO->CLR[0] = 1<<26;
+#define CMD_DATA_HIGH		GPIO->SET[1] = 1<<4;
+#define CMD_DATA_LOW		GPIO->CLR[1] = 1<<4;
+
+
+gpio_pin_config_t IO_OutputConfig =
+{
+    kGPIO_DigitalOutput,
+    0,
+};
+
+#define SETUP_CS		GPIO_PinInit(GPIO, 1, 6, &IO_OutputConfig);
+#define SETUP_CMD_DATA	GPIO_PinInit(GPIO, 1, 4, &IO_OutputConfig);
+#define SETUP_RESET		GPIO_PinInit(GPIO, 0, 26, &IO_OutputConfig);
 
 
 void ST7789_Initial(void);
@@ -104,17 +115,12 @@ void ST7789_Initial(void)
 {
 	uint32_t srcClock_Hz;
 
-    gpio_pin_config_t IO_OutputConfig =
-    {
-        kGPIO_DigitalOutput,
-        0,
-    };
 
-    GPIO_PinInit(GPIO, 1, 6, &IO_OutputConfig);
 
-    GPIO_PinInit(GPIO, 1, 9, &IO_OutputConfig);
+    SETUP_CMD_DATA;
+    SETUP_RESET;
+	SETUP_CS;
 
-    GPIO_PinInit(GPIO, 0, 26, &IO_OutputConfig);
 
 	CLOCK_AttachClk(kFFRO_to_FLEXCOMM5);
 	spi_master_config_t SPI_Config = {0};

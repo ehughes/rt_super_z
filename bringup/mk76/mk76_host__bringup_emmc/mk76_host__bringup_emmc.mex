@@ -19,6 +19,10 @@
    </preferences>
    <tools>
       <pins name="Pins" version="16.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/pin_mux.c" update_enabled="true"/>
+            <file path="board/pin_mux.h" update_enabled="true"/>
+         </generated_project_files>
          <pins_profile>
             <processor_version>16.3.0</processor_version>
             <pin_labels>
@@ -40,6 +44,11 @@
                      </feature>
                   </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_gpio" description="Pins initialization requires the LPC_GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
                      <feature name="enabled" evaluation="equal" configuration="cm33">
                         <data>true</data>
                      </feature>
@@ -156,23 +165,11 @@
                         <pin_feature name="iiena" value="disabled"/>
                      </pin_features>
                   </pin>
-                  <pin peripheral="GPIO" signal="PIO2, 10" pin_num="T15" pin_signal="PIO2_10/SD0_RESET_N/SCT0_GPI6/CTIMER2_MAT0">
-                     <pin_features>
-                        <pin_feature name="pupdena" value="disabled"/>
-                        <pin_feature name="pupdsel" value="pullDown"/>
-                        <pin_feature name="ibena" value="disabled"/>
-                        <pin_feature name="slew_rate" value="normal"/>
-                        <pin_feature name="drive" value="normal"/>
-                        <pin_feature name="amena" value="disabled"/>
-                        <pin_feature name="odena" value="disabled"/>
-                        <pin_feature name="iiena" value="disabled"/>
-                     </pin_features>
-                  </pin>
                   <pin peripheral="GPIO" signal="PIO2, 4" pin_num="T13" pin_signal="PIO2_4/SD0_WR_PRT/SCT0_OUT2/SD0_DS">
                      <pin_features>
                         <pin_feature name="pupdena" value="disabled"/>
                         <pin_feature name="pupdsel" value="pullDown"/>
-                        <pin_feature name="ibena" value="disabled"/>
+                        <pin_feature name="ibena" value="enabled"/>
                         <pin_feature name="slew_rate" value="normal"/>
                         <pin_feature name="drive" value="normal"/>
                         <pin_feature name="amena" value="disabled"/>
@@ -204,11 +201,22 @@
                         <pin_feature name="iiena" value="disabled"/>
                      </pin_features>
                   </pin>
+                  <pin peripheral="GPIO" signal="PIO2, 10" pin_num="T15" pin_signal="PIO2_10/SD0_RESET_N/SCT0_GPI6/CTIMER2_MAT0">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="gpio_init_state" value="true"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
                </pins>
             </function>
          </functions_list>
       </pins>
       <clocks name="Clocks" version="14.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/clock_config.c" update_enabled="true"/>
+            <file path="board/clock_config.h" update_enabled="true"/>
+         </generated_project_files>
          <clocks_profile>
             <processor_version>16.3.0</processor_version>
          </clocks_profile>
@@ -301,12 +309,14 @@
          </clock_configurations>
       </clocks>
       <dcdx name="DCDx" version="3.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
          <dcdx_profile>
             <processor_version>N/A</processor_version>
          </dcdx_profile>
          <dcdx_configurations/>
       </dcdx>
       <periphs name="Peripherals" version="15.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
          <peripherals_profile>
             <processor_version>N/A</processor_version>
          </peripherals_profile>
@@ -314,6 +324,7 @@
          <components/>
       </periphs>
       <tee name="TEE" version="7.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
          <tee_profile>
             <processor_version>N/A</processor_version>
          </tee_profile>

@@ -48,8 +48,8 @@
 #define BOARD_SDMMC_SD_POWER_RESET_GPIO_CLOCK_NAME   kCLOCK_HsGpio4
 #define BOARD_SDMMC_SD_POWER_RESET_GPIO_RESET_SOURCE kHSGPIO4_RST_SHIFT_RSTn
 #define BOARD_SDMMC_SD_POWER_RESET_GPIO_BASE         GPIO
-#define BOARD_SDMMC_SD_POWER_RESET_GPIO_PORT         4
-#define BOARD_SDMMC_SD_POWER_RESET_GPIO_PIN          0U
+#define BOARD_SDMMC_SD_POWER_RESET_GPIO_PORT         2
+#define BOARD_SDMMC_SD_POWER_RESET_GPIO_PIN          10U
 
 /* the EVK board require mannual tuning for sd, since there is a EMI filter between 595 and card socket which will
  * affect the standard tuning*/
@@ -58,7 +58,7 @@
 
 /* @brief mmc configuration */
 #define BOARD_SDMMC_MMC_VCC_SUPPLY               kMMC_VoltageWindows270to360
-#define BOARD_SDMMC_MMC_VCCQ_SUPPLY              kMMC_VoltageWindows270to360
+#define BOARD_SDMMC_MMC_VCCQ_SUPPLY              kMMC_VoltageWindows270to360//kMMC_VoltageWindow170to195//
 #define BOARD_SDMMC_MMC_SUPPORT_8_BIT_DATA_WIDTH 1U
 #define BOARD_SDMMC_MMC_TUNING_TYPE              0
 #define BOARD_SDMMC_DATA_BUFFER_ALIGN_SIZE       (4U)

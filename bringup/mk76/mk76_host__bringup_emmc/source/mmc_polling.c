@@ -15,6 +15,8 @@
 #include "sdmmc_config.h"
 #include "fsl_power.h"
 #include "fsl_gpio.h"
+
+#include "sdmmc_config.h"
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
@@ -62,6 +64,27 @@ SDK_ALIGN(uint8_t g_dataRead[DATA_BUFFER_SIZE], BOARD_SDMMC_DATA_BUFFER_ALIGN_SI
  * Code
  ******************************************************************************/
 
+volatile uint32_t g_systickCounter;
+
+
+void SysTick_Handler(void)
+{
+
+	if (g_systickCounter != 0U)
+    {
+        g_systickCounter--;
+    }
+}
+
+void System__Delay_mS(uint32_t n)
+{
+    g_systickCounter = n;
+    while (g_systickCounter != 0U)
+    {
+    }
+}
+
+
 /*! @brief Main function */
 int main(void)
 {
@@ -70,12 +93,55 @@ int main(void)
     bool failedFlag = false;
     char ch         = '0';
 
+
+    SystemCoreClockUpdate();
+
+    SysTick_Config(SystemCoreClock / 1000U);
+
     BOARD_InitPins();
     BOARD_BootClockRUN();
+
+
+    CLOCK_EnableClock(kCLOCK_HsGpio0);
+    CLOCK_EnableClock(kCLOCK_HsGpio1);
+    CLOCK_EnableClock(kCLOCK_HsGpio2);
+
+    GPIO_PortInit(GPIO, 0);
+
+    GPIO_PortInit(GPIO, 1);
+    GPIO_PortInit(GPIO, 2);
+
     BOARD_InitDebugConsole();
+
+    gpio_pin_config_t IO_OutputConfig =
+    										{
+    											kGPIO_DigitalOutput,
+    											0,
+    										};
+    GPIO_PinInit(GPIO, 2, 10, &IO_OutputConfig);
+    GPIO_PortToggle(GPIO, 2, 1u << 10);
+
+
+
+
     BOARD_MMC_Config(card, BOARD_SDMMC_MMC_HOST_IRQ_PRIORITY);
 
+
+   // card->busTiming = kMMC_HighSpeed200Timing;
+
+
+
+
     PRINTF("Gibbon-T eMMC Testing\r\n");
+
+
+	 GPIO_PortSet(GPIO, 2, 1u << 10);
+	 System__Delay_mS(100);
+	 GPIO_PortClear(GPIO, 2, 1u << 10);
+	 System__Delay_mS(100);
+	 GPIO_PortSet(GPIO, 2, 1u << 10);
+	 System__Delay_mS(100);
+
 
     /* Init card. */
     if (MMC_Init(card))
