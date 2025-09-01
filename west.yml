@@ -13,15 +13,16 @@ manifest:
 
   defaults:
     remote: zephyrproject-rtos
-    revision: main
+    revision: v4.2.0
 
   projects:
 
     - name: zephyr
       remote: zephyrproject-rtos
       repo-path: zephyr
-      revision: main
+      revision: v4.2.0
       import: true
+
     - name: egfx
       remote: ehughes
       repo-path: egfx

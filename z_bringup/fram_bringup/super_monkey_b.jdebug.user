@@ -1,0 +1,22 @@
+
+
+
+Breakpoint=C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/fram_bringup/src/main.c:27:2, Permitted Impl.=BP_TYPE_MIXED, State=BP_STATE_DISABLED
+Breakpoint=C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/fram_bringup/src/fram.c:38, State=BP_STATE_ON
+OpenDocument="fram.c", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/fram_bringup/src/fram.c", Line=24
+OpenDocument="device.h", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/fram_bringup/build/zephyr/include/generated/zephyr/syscalls/device.h", Line=44
+OpenDocument="spi.h", FilePath="C:/work/wavenumber/rt_super_z/zephyr/include/zephyr/drivers/spi.h", Line=876
+OpenDocument="fault_s.S", FilePath="C:/work/wavenumber/rt_super_z/zephyr/arch/arm/core/cortex_m/fault_s.S", Line=61
+OpenDocument="main.c", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/fram_bringup/src/main.c", Line=0
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=1, w=1012, h=587, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=552, h=1033, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=0, y=0, w=2560, h=382, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=0, w=1012, h=445, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Source Files", SortCol="File", SortOrder="DESCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[246;100;100;100;1139]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
+TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[100;100;100;100;100;100;115;126;171]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;366]

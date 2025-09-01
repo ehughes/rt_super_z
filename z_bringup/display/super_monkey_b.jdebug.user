@@ -1,0 +1,29 @@
+
+
+
+Breakpoint=C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/display/src/main.c:209, State=BP_STATE_ON
+Breakpoint=C:/work/wavenumber/rt_super_z/zephyr/drivers/spi/spi_context.h:176, State=BP_STATE_ON
+Breakpoint=C:/work/wavenumber/rt_super_z/zephyr/drivers/spi/spi_context.h:202, State=BP_STATE_ON
+Breakpoint=C:/work/wavenumber/rt_super_z/zephyr/drivers/spi/spi_mcux_flexcomm.c:807, State=BP_STATE_ON
+Breakpoint=C:/work/wavenumber/rt_super_z/zephyr/drivers/display/display_st7789v.c:408, State=BP_STATE_ON
+OpenDocument="spi_context.h", FilePath="C:/work/wavenumber/rt_super_z/zephyr/drivers/spi/spi_context.h", Line=162
+OpenDocument="init.c", FilePath="C:/work/wavenumber/rt_super_z/zephyr/kernel/init.c", Line=560
+OpenDocument="display_st7789v.c", FilePath="C:/work/wavenumber/rt_super_z/zephyr/drivers/display/display_st7789v.c", Line=394
+OpenDocument="mipi_dbi_spi.c", FilePath="C:/work/wavenumber/rt_super_z/zephyr/drivers/mipi_dbi/mipi_dbi_spi.c", Line=300
+OpenDocument="kernel.h", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/display/build/zephyr/include/generated/zephyr/syscalls/kernel.h", Line=219
+OpenDocument="kernel.h", FilePath="C:/work/wavenumber/rt_super_z/zephyr/include/zephyr/kernel.h", Line=669
+OpenDocument="device.h", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/display/build/zephyr/include/generated/zephyr/syscalls/device.h", Line=43
+OpenDocument="spi_mcux_flexcomm.c", FilePath="C:/work/wavenumber/rt_super_z/zephyr/drivers/spi/spi_mcux_flexcomm.c", Line=793
+OpenDocument="mipi_dbi.h", FilePath="C:/work/wavenumber/rt_super_z/zephyr/include/zephyr/drivers/mipi_dbi.h", Line=190
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=1, w=1012, h=578, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=552, h=1033, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Terminal", DockArea=BOTTOM, x=0, y=0, w=2560, h=382, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=0, w=1012, h=454, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Source Files", SortCol="File", SortOrder="DESCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[246;100;100;100;1139]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
+TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="DESCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[100;100;100;100;100;100;115;126;171]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;366]

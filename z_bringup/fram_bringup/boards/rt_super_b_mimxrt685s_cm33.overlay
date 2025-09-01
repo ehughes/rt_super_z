@@ -1,0 +1,105 @@
+
+
+&hs_lspi {
+    status = "okay";
+	pinctrl-0 = <&hs_lspi_default>;
+	pinctrl-names = "default";
+	clock-frequency = <1000000>;
+	cs-gpios = <&gpio1 14 GPIO_ACTIVE_LOW>;
+
+	fram: fram@0 {
+        compatible = "vnd,spi-device";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        label = "FRAM";
+        status = "okay";
+    };
+};
+
+ 
+
+&pinctrl {
+
+    pinmux_flexspi: pinmux_flexspi {
+		group0 {
+			pinmux = <FLEXSPI0A_SCLK_PIO1_18>,
+					<FLEXSPI0A_SS0_N_PIO1_19>,
+					<FLEXSPI0A_DATA0_PIO1_20>,
+					<FLEXSPI0A_DATA1_PIO1_21>,
+					<FLEXSPI0A_DATA2_PIO1_22>,
+					<FLEXSPI0A_DATA3_PIO1_23>;
+			input-enable;
+			slew-rate = "normal";
+			drive-strength = "high";
+		};
+    };
+
+	hs_lspi_default: hs_lspi_default {
+		group0 {
+			pinmux = <HS_SPI_SCK_PIO1_11>,
+					<HS_SPI_MISO_PIO1_12>,
+					<HS_SPI_MOSI_PIO1_13>;
+					//<HS_SPI_SSEL0_PIO1_14>;
+
+			//pinmux = <FC14_SCK_PIO1_11>,
+			//		<FC14_TXD_SCL_MISO_WS_PIO1_12>,
+			//		<FC14_RXD_SDA_MOSI_DATA_PIO1_13>;
+
+			input-enable;
+			slew-rate = "normal";
+			drive-strength = "high";
+		};
+	};
+};
+
+/*
+
+#include <zephyr/dt-bindings/mipi_dbi/mipi_dbi.h>
+
+/ {
+	chosen {
+		zephyr,display = &st7789v_st7789v_waveshare_240x240;
+	};
+
+	mipi_dbi_st7789v_waveshare_240x240 {
+		compatible = "zephyr,mipi-dbi-spi";
+		spi-dev = <&arduino_spi>;
+		dc-gpios = <&arduino_header 15 GPIO_ACTIVE_HIGH>;	
+		reset-gpios = <&arduino_header 14 GPIO_ACTIVE_LOW>;	
+		write-only;
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		st7789v_st7789v_waveshare_240x240: st7789v@0 {
+			compatible = "sitronix,st7789v";
+			mipi-max-frequency = <20000000>;
+			reg = <0>;
+			width = <240>;
+			height = <240>;
+			x-offset = <0>;
+			y-offset = <0>;
+			vcom = <0x19>;
+			gctrl = <0x35>;
+			vrhs = <0x12>;
+			vdvs = <0x20>;
+			mdac = <0x00>;
+			gamma = <0x01>;
+			colmod = <0x05>;
+			lcm = <0x2c>;
+			porch-param = [0c 0c 00 33 33];
+			cmd2en-param = [5a 69 02 01];
+			pwctrl1-param = [a4 a1];
+			pvgam-param = [D0 04 0D 11 13 2B 3F 54 4C 18 0D 0B 1F 23];
+			nvgam-param = [D0 04 0C 11 13 2C 3F 44 51 2F 1F 1F 20 23];
+			ram-param = [00 F0];
+			rgb-param = [CD 08 14];
+			mipi-mode = "MIPI_DBI_MODE_SPI_4WIRE";
+		};
+	};
+};
+
+&arduino_spi {
+	status = "okay";
+	cs-gpios = <&arduino_header 16 GPIO_ACTIVE_LOW>;	
+};
+*/

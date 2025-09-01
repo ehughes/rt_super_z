@@ -1,0 +1,18 @@
+
+
+
+Breakpoint=C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/src/main.c:22:4, State=BP_STATE_DISABLED
+Breakpoint=C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/src/main.c:57:4, State=BP_STATE_DISABLED
+OpenDocument="rt_usb.c", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/src/rt_usb.c", Line=0
+OpenDocument="fault_s.S", FilePath="C:/work/wavenumber/rt_super_z/zephyr/arch/arm/core/cortex_m/fault_s.S", Line=39
+OpenDocument="main.c", FilePath="C:/work/wavenumber/rt_super_z/rt_super_z/z_bringup/src/main.c", Line=0
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=0, w=453, h=618, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=604, h=1416, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=1, w=453, h=797, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Source Files", SortCol="File", SortOrder="ASCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[246;100;100;100;1139]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[243;484;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;366]
