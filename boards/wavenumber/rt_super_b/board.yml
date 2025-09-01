@@ -1,0 +1,6 @@
+board:
+  name: rt_super_b
+  full_name: RT Super B
+  vendor: wavenumber
+  socs:
+    - name: mimxrt685s

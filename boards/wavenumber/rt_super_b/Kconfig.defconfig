@@ -1,12 +1,12 @@
-# RT_SUPER board
+# MIMXRT685-EVK board
 
-# Copyright (c) 2020, NXP
+# Copyright 2020, 2024 NXP
 # SPDX-License-Identifier: Apache-2.0
 
-if BOARD_RT_SUPER
+if BOARD_RT_SUPER_B_MIMXRT685S_CM33
 
-config BOARD
-	default "rt_super"
+config NXP_IMXRT_BOOT_HEADER
+	default y if !BOOTLOADER_MCUBOOT
 
 config XTAL_SYS_CLK_HZ
 	default 24000000
@@ -18,18 +18,18 @@ config FLASH_MCUX_FLEXSPI_NOR
 	default y if FLASH
 
 config FLASH_SIZE
-	default $(dt_nodelabel_prop_int,is25wp064,size,K)
+	#default $(dt_node_int_prop_int,/soc/spi@134000/is25wp064@0,size,K)
+	#default 8192	
 
-config FLASH_MCUX_FLEXSPI_XIP
-	default y if FLASH
-	depends on MEMC_MCUX_FLEXSPI
-
-config FLASH_MCUX_FLEXSPI_XIP
-	default y if FLASH
-
-choice FLASH_MCUX_FLEXSPI_XIP_MEM_TARGET
-	default FLASH_MCUX_FLEXSPI_XIP_MEM_SRAM
+choice FLASH_MCUX_FLEXSPI_MX25UM51345G_OPI_MODE
+	default FLASH_MCUX_FLEXSPI_MX25UM51345G_OPI_STR
 endchoice
+
+config FXOS8700_DRDY_INT1
+	default y
+	depends on FXOS8700_TRIGGER
+
+
 
 
 if DMA_MCUX_LPC
@@ -46,4 +46,5 @@ config DISK_DRIVER_SDMMC
 	default y if DISK_DRIVERS
 
 
-endif # BOARD_MIMXRT685_EVK
+
+endif # BOARD_RT_SUPER_B_MIMXRT685S_CM33

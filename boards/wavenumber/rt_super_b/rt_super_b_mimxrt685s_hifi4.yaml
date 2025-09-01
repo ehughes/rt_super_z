@@ -1,0 +1,26 @@
+#
+# Copyright 2024 NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+identifier: rt_super_b/mimxrt685s/hifi4
+name: NXP MIMXRT685-EVK (HiFi 4)
+type: mcu
+arch: xtensa
+ram: 4608
+flash: 8192
+toolchain:
+  - zephyr
+  - xt-clang
+  - xtools
+supported:
+  - dma
+  - gpio
+  - i2c
+  - i3c
+  - i2s
+  - spi
+testing:
+  only_tags:
+    - kernel
