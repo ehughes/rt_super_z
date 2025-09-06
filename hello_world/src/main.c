@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2012-2014 Wind River Systems, Inc.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
@@ -47,8 +42,7 @@ static int monkey_handler(const struct shell *shell,
 }
 
 
-SHELL_CMD_REGISTER(monkey, NULL, "It is super Moos", monkey_handler);
-
+SHELL_CMD_REGISTER(monkey, NULL, "This monkey is super", monkey_handler);
 
 int main(void)
 {
@@ -57,6 +51,7 @@ int main(void)
 
 	while(1)
 	{  
-		k_sleep(K_MSEC(1000));
+
+        k_sleep(K_MSEC(1));
 	}
 }
